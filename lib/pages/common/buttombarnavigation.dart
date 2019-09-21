@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:bottom_navy_bar/bottom_navy_bar.dart';
 
 class Buttom extends StatefulWidget {
+  int currentIndex;
+  Buttom(this.currentIndex);
   @override
   State<StatefulWidget> createState() {
     // TODO: implement createState
@@ -11,14 +13,22 @@ class Buttom extends StatefulWidget {
 }
 
 class ButtonState extends State<Buttom> {
-  int currentIndex = 0;
   @override
   Widget build(BuildContext context) {
     return BottomNavyBar(
-      selectedIndex: currentIndex,
+      selectedIndex: widget.currentIndex,
       showElevation: true,
       onItemSelected: (index) => setState(() {
-        currentIndex = index;
+        widget.currentIndex = index;
+        if (index == 0) {
+          Navigator.pushNamed(context, '/book');
+        } else if (index == 1) {
+          Navigator.pushNamed(context, '/mybooking');
+        } else if (index == 2) {
+          Navigator.pushNamed(context, '/');
+        } else {
+          Navigator.pushNamed(context, '/help');
+        }
       }),
       items: [
         BottomNavyBarItem(

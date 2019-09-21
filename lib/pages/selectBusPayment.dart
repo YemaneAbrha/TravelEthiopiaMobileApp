@@ -159,67 +159,6 @@ class _SelectBusPageState extends State<SelectBusPage> {
                   new Text("Geda Bus "),
                 ],
               ),
-              // Text(
-              //   "PayMent Thorough",
-              //   style: new TextStyle(
-              //       fontSize: 20.0, fontWeight: FontWeight.bold),
-              // ),
-              // Row(
-              //   // mainAxisAlignment: MainAxisAlignment.center,
-              //   children: <Widget>[
-              //     new Radio(
-              //       value: 1,
-              //       groupValue: selectedpayment,
-              //       activeColor: Colors.green,
-              //       onChanged: (value) {
-              //         setselectedpayment(value);
-              //       },
-              //     ),
-              //     new Text("Hello Cash "),
-              //   ],
-              // ),
-              // Row(
-              //   // mainAxisAlignment: MainAxisAlignment.center,
-              //   children: <Widget>[
-              //     new Radio(
-              //       value: 2,
-              //       groupValue: selectedpayment,
-              //       activeColor: Colors.green,
-              //       onChanged: (value) {
-              //         setselectedpayment(value);
-              //       },
-              //     ),
-              //     new Text("Amole "),
-              //   ],
-              // ),
-              // Row(
-              //   // mainAxisAlignment: MainAxisAlignment.center,
-              //   children: <Widget>[
-              //     new Radio(
-              //       value: 3,
-              //       groupValue: selectedpayment,
-              //       activeColor: Colors.green,
-              //       onChanged: (value) {
-              //         setselectedpayment(value);
-              //       },
-              //     ),
-              //     new Text("CBE Birr "),
-              //   ],
-              // ),
-              // Row(
-              //   // mainAxisAlignment: MainAxisAlignment.center,
-              //   children: <Widget>[
-              //     new Radio(
-              //       value: 4,
-              //       groupValue: selectedpayment,
-              //       activeColor: Colors.green,
-              //       onChanged: (value) {
-              //         setselectedpayment(value);
-              //       },
-              //     ),
-              //     new Text("M-Birr "),
-              //   ],
-              // ),
               Center(
                 child: RaisedButton(
                   child: Text("Submit"),
@@ -230,7 +169,7 @@ class _SelectBusPageState extends State<SelectBusPage> {
           ),
         ),
       ),
-      bottomNavigationBar: Buttom(),
+      bottomNavigationBar: Buttom(0),
     );
   }
 }

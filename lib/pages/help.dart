@@ -31,7 +31,7 @@ class _HelpPageState extends State<HelpPage> {
       drawer: BasicDrawer(),
       backgroundColor: Color.fromRGBO(230, 230, 230, 1.0),
       body: Container(
-        padding: EdgeInsets.all(32.0),
+        padding: EdgeInsets.fromLTRB(32.0, 0.0, 32.0, 0.0),
         child: Center(
           child: ListView(
             children: <Widget>[
@@ -139,7 +139,7 @@ class _HelpPageState extends State<HelpPage> {
           ),
         ),
       ),
-      bottomNavigationBar: Buttom(),
+      bottomNavigationBar: Buttom(3),
     );
   }
 }

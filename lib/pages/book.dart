@@ -3,6 +3,7 @@ import 'package:intl/intl.dart';
 import 'package:datetime_picker_formfield/datetime_picker_formfield.dart';
 import 'package:travel_ethiopia/pages/common/basicdrawer.dart';
 import 'package:datetime_picker_formfield/time_picker_formfield.dart';
+import 'package:travel_ethiopia/pages/common/buttombarnavigation.dart';
 
 class Book extends StatefulWidget {
   //final dateFormat = DateFormat();
@@ -98,6 +99,7 @@ class _BookState extends State<Book> {
           ),
         ),
       ),
+      bottomNavigationBar: Buttom(0),
     );
   }
 }

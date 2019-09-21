@@ -74,7 +74,7 @@ class _MyBookingPageState extends State<MyBookingPage> {
           ),
         ),
       ),
-      bottomNavigationBar: Buttom(),
+      bottomNavigationBar: Buttom(1),
     );
   }
 }

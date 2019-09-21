@@ -31,7 +31,7 @@ class _PrivacyPageState extends State<PrivacyPage> {
       drawer: BasicDrawer(),
       backgroundColor: Color.fromRGBO(230, 230, 230, 1.0),
       body: Container(
-        padding: EdgeInsets.all(32.0),
+        padding: EdgeInsets.all(0.0),
         child: Center(
           child: ListView(
             children: <Widget>[
@@ -75,7 +75,7 @@ class _PrivacyPageState extends State<PrivacyPage> {
           ),
         ),
       ),
-      bottomNavigationBar: Buttom(),
+      bottomNavigationBar: Buttom(3),
     );
   }
 }
