@@ -16,22 +16,23 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Travel Ethiopia',
-      theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // Try running your application with "flutter run". You'll see the
-        // application has a blue toolbar. Then, without quitting the app, try
-        // changing the primarySwatch below to and then invoke
-        // "hot reload" (press "r" in the console where you ran "flutter run",
-        // or simply save your changes to "hot reload" in a Flutter IDE).
-        // Notice that the counter didn't reset back to zero; the application
-        // is not restarted.
 
-        brightness: Brightness.light,
-        //accentColor: Colors.amberAccent[400],
-        //primarySwatch: Colors.deepOrange,
-        // primarySwatch: Colors.amberAccent[400],
-      ),
+      // This is the theme of your application.
+      //
+      // Try running your application with "flutter run". You'll see the
+      // application has a blue toolbar. Then, without quitting the app, try
+      // changing the primarySwatch below to and then invoke
+      // "hot reload" (press "r" in the console where you ran "flutter run",
+      // or simply save your changes to "hot reload" in a Flutter IDE).
+      // Notice that the counter didn't reset back to zero; the application
+      // is not restarted.
+      // theme: new ThemeData(
+      //     primaryColor: Color.fromRGBO(58, 66, 86, 1.0), fontFamily: 'Raleway'),
+
+      //accentColor: Colors.amberAccent[400],
+      //primarySwatch: Colors.deepOrange,
+      // primarySwatch: Colors.amberAccent[400],
+
       routes: <String, WidgetBuilder>{
         "/mybooking": (BuildContext context) => MyBookingPage(),
         "/selectBus": (BuildContext context) => SelectBusPage(),

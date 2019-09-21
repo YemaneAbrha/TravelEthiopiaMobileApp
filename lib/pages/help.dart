@@ -24,12 +24,12 @@ class _HelpPageState extends State<HelpPage> {
           "Help",
           style: TextStyle(color: Colors.black),
         ),
-        backgroundColor: Colors.amber[400],
+        backgroundColor: Color.fromRGBO(0, 136, 204, 0.8),
         iconTheme: IconThemeData(color: Colors.black),
         elevation: Theme.of(context).platform == TargetPlatform.iOS ? 0.0 : 6.0,
       ),
       drawer: BasicDrawer(),
-      backgroundColor: Colors.white,
+      backgroundColor: Color.fromRGBO(230, 230, 230, 1.0),
       body: Container(
         padding: EdgeInsets.all(32.0),
         child: Center(

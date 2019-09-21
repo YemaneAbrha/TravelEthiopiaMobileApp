@@ -17,6 +17,8 @@ environment:
   sdk: ">=2.1.0 <3.0.0"
 
 dependencies:
+  # titled_navigation_bar: ^3.5.0
+  bottom_navy_bar:
   intl: ^0.15.8
   circular_profile_avatar: ^1.0.2
   # datetime_picker_formfield: any
@@ -64,10 +66,9 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   # fonts:
-  #   - family: Schyler
+  #   - family: Roboto
   #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
-  #       - asset: fonts/Schyler-Italic.ttf
+  #       - asset: fonts/Roboto-Medium.ttf
   #         style: italic
   #   - family: Trajan Pro
   #     fonts:

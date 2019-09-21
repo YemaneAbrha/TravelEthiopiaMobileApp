@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:datetime_picker_formfield/datetime_picker_formfield.dart';
 import 'package:travel_ethiopia/pages/common/basicdrawer.dart';
+import 'package:travel_ethiopia/pages/common/bottom_navy_bar.dart';
 import 'package:datetime_picker_formfield/time_picker_formfield.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -26,21 +27,38 @@ class _HomeScreenState extends State<HomeScreen> {
   //   SharedPreferences preferences = await SharedPreferences.getInstance();
   //   await preferences.setString('LastScreenRoute', lastRoute);
   // }
+  // TextStyle getCustomFontStyle() {
+  //   return const TextStyle(
+  //     fontFamily: 'Ruboto',
+  //     color: Colors.black,
+  //     fontWeight: FontWeight.w100,
+  //     fontSize: 50.0,
+  //   );
+  // }
 
   @override
   Widget build(BuildContext context) {
+    int currentIndex = 0;
+    int _counter = 0;
+
+    void _incrementCounter() {
+      setState(() {
+        _counter++;
+      });
+    }
+
     return Scaffold(
       appBar: AppBar(
         title: Text(
           "Travel Ethiopia",
-          style: TextStyle(color: Colors.black),
+          // style: getCustomFontStyle(),
         ),
-        backgroundColor: Colors.amber[400],
+        backgroundColor: Color.fromRGBO(0, 136, 204, 0.8),
         iconTheme: IconThemeData(color: Colors.black),
         elevation: Theme.of(context).platform == TargetPlatform.iOS ? 0.0 : 6.0,
       ),
       drawer: BasicDrawer(),
-      backgroundColor: Colors.white,
+      backgroundColor: Color.fromRGBO(230, 230, 230, 1.0),
       body: Container(
         padding: EdgeInsets.all(32.0),
         child: Center(
@@ -189,6 +207,32 @@ class _HomeScreenState extends State<HomeScreen> {
             ],
           ),
         ),
+      ),
+      bottomNavigationBar: BottomNavyBar(
+        selectedIndex: currentIndex,
+        showElevation: true,
+        onItemSelected: (index) => setState(() {
+          currentIndex = index;
+        }),
+        items: [
+          BottomNavyBarItem(
+            icon: Icon(Icons.apps),
+            title: Text('Home'),
+            activeColor: Colors.red,
+          ),
+          BottomNavyBarItem(
+              icon: Icon(Icons.people),
+              title: Text('Users'),
+              activeColor: Colors.purpleAccent),
+          BottomNavyBarItem(
+              icon: Icon(Icons.message),
+              title: Text('Messages'),
+              activeColor: Colors.pink),
+          BottomNavyBarItem(
+              icon: Icon(Icons.settings),
+              title: Text('Settings'),
+              activeColor: Colors.blue),
+        ],
       ),
     );
   }

@@ -34,12 +34,12 @@ class _UserProfileState extends State<UserProfile> {
           "Profile",
           style: TextStyle(color: Colors.black),
         ),
-        backgroundColor: Colors.amber[400],
+        backgroundColor: Color.fromRGBO(0, 136, 204, 0.8),
         iconTheme: IconThemeData(color: Colors.black),
         elevation: Theme.of(context).platform == TargetPlatform.iOS ? 0.0 : 6.0,
       ),
       drawer: BasicDrawer(),
-      backgroundColor: Colors.white,
+      backgroundColor: Color.fromRGBO(230, 230, 230, 1.0),
       body: Container(
           child: Form(
         key: widget._formKey,
