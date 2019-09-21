@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:circular_profile_avatar/circular_profile_avatar.dart';
 
+import 'package:travel_ethiopia/pages/common/buttombarnavigation.dart';
 import 'package:travel_ethiopia/pages/common/basicdrawer.dart';
 import 'dart:async';
 
@@ -137,6 +138,7 @@ class _UserProfileState extends State<UserProfile> {
           ],
         ),
       )),
+      bottomNavigationBar: Buttom(),
     );
   }
 }

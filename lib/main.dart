@@ -47,3 +47,51 @@ class MyApp extends StatelessWidget {
     // home: Navigator.push(context, '/HomeScreen'));
   }
 }
+// import 'package:flutter/material.dart';
+
+// // import 'package:bottom_navy_bar/bottom_navy_bar.dart';
+// import 'package:travel_ethiopia/pages/common/buttombarnavigation.dart';
+
+// void main() => runApp(MyApp());
+
+// class MyApp extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       title: 'Flutter Demo',
+//       theme: ThemeData(
+//         primarySwatch: Colors.blue,
+//       ),
+//       home: MyHomePage(title: 'Flutter Demo Home Page'),
+//     );
+//   }
+// }
+
+// class MyHomePage extends StatefulWidget {
+//   MyHomePage({Key key, this.title}) : super(key: key);
+
+//   final String title;
+
+//   @override
+//   _MyHomePageState createState() => _MyHomePageState();
+// }
+
+// class _MyHomePageState extends State<MyHomePage> {
+//   int currentIndex = 0;
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       appBar: AppBar(
+//         title: Text(widget.title),
+//       ),
+//       body: Center(
+//         child: Column(
+//           mainAxisAlignment: MainAxisAlignment.center,
+//         ),
+//       ),
+//       // This trailing comma makes auto-formatting nicer for build methods.
+//       bottomNavigationBar: Buttom(),
+//     );
+//   }
+// }

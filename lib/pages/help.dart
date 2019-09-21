@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:travel_ethiopia/pages/common/buttombarnavigation.dart';
 import 'package:travel_ethiopia/pages/common/basicdrawer.dart';
 import 'package:travel_ethiopia/functions/showSingleButtonDialog.dart';
 
@@ -139,6 +139,7 @@ class _HelpPageState extends State<HelpPage> {
           ),
         ),
       ),
+      bottomNavigationBar: Buttom(),
     );
   }
 }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:travel_ethiopia/pages/common/basicdrawer.dart';
+import 'package:travel_ethiopia/pages/common/buttombarnavigation.dart';
 
 class MyBookingPage extends StatefulWidget {
   _MyBookingPageState createState() => _MyBookingPageState();
@@ -73,6 +74,7 @@ class _MyBookingPageState extends State<MyBookingPage> {
           ),
         ),
       ),
+      bottomNavigationBar: Buttom(),
     );
   }
 }

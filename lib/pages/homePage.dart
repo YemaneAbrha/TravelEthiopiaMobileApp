@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart';
-import 'package:datetime_picker_formfield/datetime_picker_formfield.dart';
+import 'package:travel_ethiopia/pages/common/buttombarnavigation.dart';
 import 'package:travel_ethiopia/pages/common/basicdrawer.dart';
-import 'package:travel_ethiopia/pages/common/bottom_navy_bar.dart';
-import 'package:datetime_picker_formfield/time_picker_formfield.dart';
 
 class HomeScreen extends StatefulWidget {
   //final dateFormat = DateFormat();
@@ -13,10 +10,6 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  final dateFormat = DateFormat("EEEE, MMMM d, yyyy");
-  final timeFormat = DateFormat("h:mm a");
-  DateTime date;
-  TimeOfDay time;
   @override
   void initState() {
     super.initState();
@@ -38,15 +31,6 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    int currentIndex = 0;
-    int _counter = 0;
-
-    void _incrementCounter() {
-      setState(() {
-        _counter++;
-      });
-    }
-
     return Scaffold(
       appBar: AppBar(
         title: Text(
@@ -60,7 +44,7 @@ class _HomeScreenState extends State<HomeScreen> {
       drawer: BasicDrawer(),
       backgroundColor: Color.fromRGBO(230, 230, 230, 1.0),
       body: Container(
-        padding: EdgeInsets.all(32.0),
+        padding: EdgeInsets.fromLTRB(32.0, 0.0, 32.0, 0.0),
         child: Center(
           child: ListView(
             children: <Widget>[
@@ -208,32 +192,7 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ),
       ),
-      bottomNavigationBar: BottomNavyBar(
-        selectedIndex: currentIndex,
-        showElevation: true,
-        onItemSelected: (index) => setState(() {
-          currentIndex = index;
-        }),
-        items: [
-          BottomNavyBarItem(
-            icon: Icon(Icons.apps),
-            title: Text('Home'),
-            activeColor: Colors.red,
-          ),
-          BottomNavyBarItem(
-              icon: Icon(Icons.people),
-              title: Text('Users'),
-              activeColor: Colors.purpleAccent),
-          BottomNavyBarItem(
-              icon: Icon(Icons.message),
-              title: Text('Messages'),
-              activeColor: Colors.pink),
-          BottomNavyBarItem(
-              icon: Icon(Icons.settings),
-              title: Text('Settings'),
-              activeColor: Colors.blue),
-        ],
-      ),
+      bottomNavigationBar: Buttom(),
     );
   }
 }

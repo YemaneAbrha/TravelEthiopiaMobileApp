@@ -1,18 +1,44 @@
-//import 'package:titled_navigation_bar/titled_navigation_bar.dart';
 import 'package:flutter/material.dart';
 
-class ButtomNavBarContainer extends StatefulWidget {
+import 'package:bottom_navy_bar/bottom_navy_bar.dart';
+
+class Buttom extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
     // TODO: implement createState
-    return null;
+    return ButtonState();
   }
 }
 
-class _BuButtomNavBarContainerState extends State<ButtomNavBarContainer> {
+class ButtonState extends State<Buttom> {
+  int currentIndex = 0;
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
-    return null;
+    return BottomNavyBar(
+      selectedIndex: currentIndex,
+      showElevation: true,
+      onItemSelected: (index) => setState(() {
+        currentIndex = index;
+      }),
+      items: [
+        BottomNavyBarItem(
+          icon: Icon(Icons.apps),
+          title: Text('Home'),
+          activeColor: Colors.blue,
+        ),
+        BottomNavyBarItem(
+            icon: Icon(Icons.card_travel),
+            title: Text('My Booking'),
+            activeColor: Colors.blue),
+        BottomNavyBarItem(
+            icon: Icon(Icons.subway),
+            title: Text('All Bus'),
+            activeColor: Colors.blue),
+        BottomNavyBarItem(
+            icon: Icon(Icons.history),
+            title: Text('History'),
+            activeColor: Colors.blue),
+      ],
+    );
   }
 }
