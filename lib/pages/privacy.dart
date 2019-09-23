@@ -21,7 +21,7 @@ class _PrivacyPageState extends State<PrivacyPage> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "Help",
+          "Privacy",
           style: TextStyle(color: Colors.black),
         ),
         actions: <Widget>[

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:travel_ethiopia/pages/common/buttombarnavigation.dart';
-import 'package:travel_ethiopia/pages/common/basicdrawer.dart';
+// import 'package:travel_ethiopia/pages/common/basicdrawer.dart';
 
 class HomeScreen extends StatefulWidget {
   //final dateFormat = DateFormat();
@@ -16,26 +16,13 @@ class _HomeScreenState extends State<HomeScreen> {
     // _saveCurrentRoute("/HomeScreen");
   }
 
-  // _saveCurrentRoute(String lastRoute) async {
-  //   SharedPreferences preferences = await SharedPreferences.getInstance();
-  //   await preferences.setString('LastScreenRoute', lastRoute);
-  // }
-  // TextStyle getCustomFontStyle() {
-  //   return const TextStyle(
-  //     fontFamily: 'Ruboto',
-  //     color: Colors.black,
-  //     fontWeight: FontWeight.w100,
-  //     fontSize: 50.0,
-  //   );
-  // }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text(
           "Travel Ethiopia",
-          // style: getCustomFontStyle(),
+          style: TextStyle(color: Colors.black),
         ),
         actions: <Widget>[
           IconButton(

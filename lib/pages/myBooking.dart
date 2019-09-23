@@ -11,7 +11,10 @@ class _MyBookingPageState extends State<MyBookingPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("MY BOOKING"),
+        title: Text(
+          "MY BOOKING",
+          style: TextStyle(color: Colors.black),
+        ),
         actions: <Widget>[
           IconButton(
             icon: Icon(Icons.person),

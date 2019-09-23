@@ -32,11 +32,6 @@ class _SelectBusPageState extends State<SelectBusPage> {
     });
   }
 
-  // _saveCurrentRoute(String lastRoute) async {
-  //   SharedPreferences preferences = await SharedPreferences.getInstance();
-  //   await preferences.setString('LastScreenRoute', lastRoute);
-  // }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
