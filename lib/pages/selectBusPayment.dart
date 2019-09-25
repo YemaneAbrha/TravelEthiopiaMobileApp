@@ -52,7 +52,7 @@ class _SelectBusPageState extends State<SelectBusPage> {
         iconTheme: IconThemeData(color: Colors.black),
         elevation: Theme.of(context).platform == TargetPlatform.iOS ? 0.0 : 6.0,
       ),
-      drawer: BasicDrawer(),
+      // drawer: BasicDrawer(),
       backgroundColor: Color.fromRGBO(230, 230, 230, 1.0),
       body: Container(
         padding: EdgeInsets.all(32.0),

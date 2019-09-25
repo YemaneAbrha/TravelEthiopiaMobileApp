@@ -25,7 +25,7 @@ class ButtonState extends State<Buttom> {
         } else if (index == 1) {
           Navigator.pushNamed(context, '/mybooking');
         } else if (index == 2) {
-          Navigator.pushNamed(context, '/');
+          Navigator.pushNamed(context, '/allbus');
         } else {
           Navigator.pushNamed(context, '/help');
         }

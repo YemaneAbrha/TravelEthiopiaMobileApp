@@ -88,7 +88,9 @@ class _RegistrtionPageState extends State<RegistrationPage> {
                     child: new Text(' SUBMIT',
                         style:
                             new TextStyle(fontSize: 16.0, color: Colors.white)),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushReplacementNamed(context, '/allbus');
+                    },
                   ),
                 ),
               ),

@@ -8,6 +8,7 @@ import 'package:travel_ethiopia/pages/myBooking.dart';
 import 'package:travel_ethiopia/pages/help.dart';
 import 'package:travel_ethiopia/pages/privacy.dart';
 import 'package:travel_ethiopia/pages/profile.dart';
+import 'package:travel_ethiopia/pages/splashScreen.dart';
 
 void main() => runApp(MyApp());
 
@@ -24,10 +25,13 @@ class MyApp extends StatelessWidget {
         "/help": (BuildContext context) => HelpPage(context),
         "/privacy": (BuildContext context) => PrivacyPage(context),
         '/profile': (BuildContext context) => UserProfile(context),
-        //  "/LoginScreen": (BuildContext context) => LoginScreen(),
+        '/allbus': (BuildContext context) => HomeScreen(context),
+        '/register': (BuildContext context) => RegistrationPage(context),
+
+        //  "/allbus": (BuildContext context) => AllBus(),
       },
       // theme: ThemeData(fontFamily: 'Raleway'),
-      home: HomeScreen(context),
+      home: SplashScreenPage(context),
     );
   }
 }
