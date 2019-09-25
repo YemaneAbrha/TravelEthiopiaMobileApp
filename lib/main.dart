@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'package:travel_ethiopia/pages/registration.dart';
 import 'package:travel_ethiopia/pages/book.dart';
 import 'package:travel_ethiopia/pages/selectBusPayment.dart';
 import 'package:travel_ethiopia/pages/homePage.dart';
