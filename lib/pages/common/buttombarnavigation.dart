@@ -17,7 +17,7 @@ class ButtonState extends State<Buttom> {
   Widget build(BuildContext context) {
     return BottomNavyBar(
       selectedIndex: widget.currentIndex,
-      showElevation: true,
+      showElevation: false,
       onItemSelected: (index) => setState(() {
         widget.currentIndex = index;
         if (index == 0) {

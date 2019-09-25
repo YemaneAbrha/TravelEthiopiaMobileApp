@@ -25,6 +25,7 @@ class MyApp extends StatelessWidget {
         '/profile': (BuildContext context) => UserProfile(context),
         //  "/LoginScreen": (BuildContext context) => LoginScreen(),
       },
+      // theme: ThemeData(fontFamily: 'Raleway'),
       home: HomeScreen(context),
     );
   }

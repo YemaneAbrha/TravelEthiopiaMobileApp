@@ -15,10 +15,10 @@ class BottomNavyBar extends StatelessWidget {
   BottomNavyBar(
       {Key key,
       this.selectedIndex = 0,
-      this.showElevation = true,
+      this.showElevation = false,
       this.iconSize = 24,
       this.backgroundColor,
-      this.animationDuration = const Duration(milliseconds: 270),
+      this.animationDuration = const Duration(milliseconds: 0),
       @required this.items,
       @required this.onItemSelected}) {
     assert(items != null);

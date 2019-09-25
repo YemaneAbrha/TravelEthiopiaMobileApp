@@ -23,6 +23,11 @@ class _BookState extends State<Book> {
     // _saveCurrentRoute("/HomeScreen");
   }
 
+  // _saveCurrentRoute(String lastRoute) async {
+  //   SharedPreferences preferences = await SharedPreferences.getInstance();
+  //   await preferences.setString('LastScreenRoute', lastRoute);
+  // }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
