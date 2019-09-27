@@ -12,8 +12,8 @@ class _MyBookingPageState extends State<MyBookingPage> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "MY BOOKING",
-          style: TextStyle(color: Colors.black),
+          "Travel Ethiopia",
+          style: TextStyle(color: Colors.white),
         ),
         actions: <Widget>[
           IconButton(

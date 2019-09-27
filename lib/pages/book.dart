@@ -34,7 +34,7 @@ class _BookState extends State<Book> {
       appBar: AppBar(
         title: Text(
           "Travel Ethiopia",
-          style: TextStyle(color: Colors.black),
+          style: TextStyle(color: Colors.white),
         ),
         actions: <Widget>[
           IconButton(

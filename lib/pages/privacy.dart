@@ -21,8 +21,8 @@ class _PrivacyPageState extends State<PrivacyPage> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "Privacy",
-          style: TextStyle(color: Colors.black),
+          "Travel Ethiopia",
+          style: TextStyle(color: Colors.white),
         ),
         actions: <Widget>[
           IconButton(

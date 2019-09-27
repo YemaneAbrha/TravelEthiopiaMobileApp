@@ -21,8 +21,8 @@ class _HelpPageState extends State<HelpPage> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "Help",
-          style: TextStyle(color: Colors.black),
+          "Travel Ethiopia",
+          style: TextStyle(color: Colors.white),
         ),
         actions: <Widget>[
           IconButton(

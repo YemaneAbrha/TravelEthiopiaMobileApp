@@ -38,7 +38,7 @@ class _SelectBusPageState extends State<SelectBusPage> {
       appBar: AppBar(
         title: Text(
           "Travel Ethiopia",
-          style: TextStyle(color: Colors.black),
+          style: TextStyle(color: Colors.white),
         ),
         actions: <Widget>[
           IconButton(

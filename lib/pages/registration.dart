@@ -16,7 +16,7 @@ class _RegistrtionPageState extends State<RegistrationPage> {
           style: TextStyle(color: Colors.black),
         ),
         backgroundColor: Color.fromRGBO(0, 136, 204, 0.8),
-        iconTheme: IconThemeData(color: Colors.black),
+        iconTheme: IconThemeData(color: Colors.white),
         elevation: Theme.of(context).platform == TargetPlatform.iOS ? 0.0 : 6.0,
       ),
       backgroundColor: Color.fromRGBO(230, 230, 230, 1.0),
