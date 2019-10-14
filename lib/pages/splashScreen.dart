@@ -13,7 +13,7 @@ class _SplashScreenPage extends State<SplashScreenPage> {
   @override
   Widget build(BuildContext context) {
     return new SplashScreen(
-      seconds: 20,
+      seconds: 5,
       navigateAfterSeconds: new RegistrationPage(context),
       // title: new Text(
       //   ' ጉዞ ',
@@ -31,24 +31,6 @@ class _SplashScreenPage extends State<SplashScreenPage> {
 
       onClick: () => print(""),
       loaderColor: Colors.green,
-    );
-  }
-}
-
-class AfterSplash extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return new Scaffold(
-      appBar: new AppBar(
-        title: new Text("Welcome In SplashScreen Package"),
-        automaticallyImplyLeading: false,
-      ),
-      body: new Center(
-        child: new Text(
-          "Succeeded!",
-          style: new TextStyle(fontWeight: FontWeight.bold, fontSize: 30.0),
-        ),
-      ),
     );
   }
 }

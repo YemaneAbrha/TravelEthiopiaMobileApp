@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:travel_ethiopia/pages/common/buttombarnavigation.dart';
-import 'package:travel_ethiopia/pages/common/basicdrawer.dart';
+import 'package:travel_ethiopia/pages/common/basicappbar.dart';
 import 'package:travel_ethiopia/functions/showSingleButtonDialog.dart';
 
 class HelpPage extends StatefulWidget {
@@ -19,24 +19,7 @@ class _HelpPageState extends State<HelpPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          "Travel Ethiopia",
-          style: TextStyle(color: Colors.white),
-        ),
-        actions: <Widget>[
-          IconButton(
-            icon: Icon(Icons.person),
-            onPressed: () {
-              // _select(choices[1]);
-            },
-          ),
-        ],
-        backgroundColor: Color.fromRGBO(0, 136, 204, 0.8),
-        iconTheme: IconThemeData(color: Colors.black),
-        elevation: Theme.of(context).platform == TargetPlatform.iOS ? 0.0 : 6.0,
-      ),
-      //  drawer: BasicDrawer(),
+      appBar: BasicAppBar.getAppBar(),
       backgroundColor: Color.fromRGBO(230, 230, 230, 1.0),
       body: Container(
         padding: EdgeInsets.fromLTRB(32.0, 0.0, 32.0, 0.0),

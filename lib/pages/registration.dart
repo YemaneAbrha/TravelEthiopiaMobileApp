@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'package:travel_ethiopia/pages/common/basicappbar.dart';
+
 class RegistrationPage extends StatefulWidget {
   RegistrationPage(BuildContext context);
   _RegistrtionPageState createState() => _RegistrtionPageState();
@@ -12,7 +14,7 @@ class _RegistrtionPageState extends State<RegistrationPage> {
     return Scaffold(
       appBar: new AppBar(
         title: new Text(
-          "Travel Ethiopia",
+          "ጉዞ ፥ ኢትዮጵያ",
           style: TextStyle(color: Colors.black),
         ),
         backgroundColor: Color.fromRGBO(0, 136, 204, 0.8),

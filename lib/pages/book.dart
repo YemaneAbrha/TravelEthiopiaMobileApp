@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:datetime_picker_formfield/datetime_picker_formfield.dart';
-import 'package:travel_ethiopia/pages/common/basicdrawer.dart';
+import 'package:travel_ethiopia/pages/common/basicappbar.dart';
 import 'package:datetime_picker_formfield/time_picker_formfield.dart';
 import 'package:travel_ethiopia/pages/common/buttombarnavigation.dart';
 
@@ -31,23 +31,7 @@ class _BookState extends State<Book> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          "Travel Ethiopia",
-          style: TextStyle(color: Colors.white),
-        ),
-        actions: <Widget>[
-          IconButton(
-            icon: Icon(Icons.person),
-            onPressed: () {
-              // _select(choices[1]);
-            },
-          ),
-        ],
-        backgroundColor: Color.fromRGBO(0, 136, 204, 0.8),
-        iconTheme: IconThemeData(color: Colors.black),
-        elevation: Theme.of(context).platform == TargetPlatform.iOS ? 0.0 : 6.0,
-      ),
+      appBar: BasicAppBar.getAppBar(),
       // drawer: BasicDrawer(),
       backgroundColor: Color.fromRGBO(230, 230, 230, 1.0),
       body: Container(
