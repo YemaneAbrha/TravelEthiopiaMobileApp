@@ -31,8 +31,6 @@ class _UserProfileState extends State<UserProfile> {
       appBar: BasicAppBar.getAppBar(context),
       backgroundColor: Color.fromRGBO(230, 230, 230, 1.0),
       body: Container(
-          child: Form(
-        key: widget._formKey,
         child: ListView(
           children: <Widget>[
             // new Container(
@@ -71,7 +69,9 @@ class _UserProfileState extends State<UserProfile> {
               textCapitalization: TextCapitalization.sentences,
               textAlign: TextAlign.center,
               decoration: InputDecoration(
-                  icon: Icon(Icons.person), border: OutlineInputBorder()),
+                  icon: Icon(Icons.person),
+                  border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(7.0))),
               controller: _fullnamecontroller,
               validator: (value) {
                 if (value.isEmpty) {
@@ -87,7 +87,9 @@ class _UserProfileState extends State<UserProfile> {
               child: new TextFormField(
                 textAlign: TextAlign.center,
                 decoration: InputDecoration(
-                    icon: Icon(Icons.call), border: OutlineInputBorder()),
+                    icon: Icon(Icons.call),
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(7.0))),
                 controller: _phonenumbercontroller,
                 validator: (value) {
                   if (value.isEmpty) {
@@ -106,7 +108,9 @@ class _UserProfileState extends State<UserProfile> {
                 textAlign: TextAlign.center,
                 keyboardType: TextInputType.emailAddress,
                 decoration: InputDecoration(
-                    icon: Icon(Icons.email), border: OutlineInputBorder()),
+                    icon: Icon(Icons.email),
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(7.0))),
                 controller: _emailcontroller,
                 validator: (value) {
                   if (value.isEmpty) {
@@ -126,7 +130,7 @@ class _UserProfileState extends State<UserProfile> {
             ),
           ],
         ),
-      )),
+      ),
       bottomNavigationBar: Buttom(3),
     );
   }

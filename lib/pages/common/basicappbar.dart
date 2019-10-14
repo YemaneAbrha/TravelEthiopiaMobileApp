@@ -11,8 +11,8 @@ class BasicAppBar {
         IconButton(
           icon: Icon(Icons.person),
           onPressed: () {
-            Navigator.pushNamed(context, 'profile');
-            // _select(choices[1]);
+            // Navigator.pushNamed(context, 'profile');
+            Navigator.pushNamed(context, '/profile');
           },
         ),
       ],
