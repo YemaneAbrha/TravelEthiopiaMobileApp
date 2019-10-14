@@ -27,7 +27,7 @@ class _SplashScreenPage extends State<SplashScreenPage> {
       ),
       //backgroundColor: Colors.white,
       styleTextUnderTheLoader: new TextStyle(),
-      photoSize: 210.0,
+      photoSize: 200.0,
 
       onClick: () => print(""),
       loaderColor: Colors.green,

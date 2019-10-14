@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class BasicAppBar {
-  static getAppBar() {
+  static getAppBar(BuildContext context) {
     return AppBar(
       title: Text(
         "ጉዞ ፥ ኢትዮጵያ",
@@ -11,6 +11,7 @@ class BasicAppBar {
         IconButton(
           icon: Icon(Icons.person),
           onPressed: () {
+            Navigator.pushNamed(context, 'profile');
             // _select(choices[1]);
           },
         ),

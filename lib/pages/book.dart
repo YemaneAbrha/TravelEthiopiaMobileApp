@@ -31,7 +31,7 @@ class _BookState extends State<Book> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: BasicAppBar.getAppBar(),
+      appBar: BasicAppBar.getAppBar(context),
       // drawer: BasicDrawer(),
       backgroundColor: Color.fromRGBO(230, 230, 230, 1.0),
       body: Container(
@@ -79,6 +79,19 @@ class _BookState extends State<Book> {
                 decoration: InputDecoration(labelText: 'Departure Time *'),
                 onChanged: (t) => setState(() => {}),
               ),
+              TextField(
+                decoration: new InputDecoration(
+                    labelText: "PhoneNumber(If you will pay by other phone) "),
+                keyboardType: TextInputType.text,
+                onChanged: (String value) {
+                  setState(() {
+                    //_titleValue = value;
+                  });
+                },
+              ),
+              SizedBox(
+                height: 10.0,
+              ),
               Center(
                 child: RaisedButton(
                   child: Text("Submit"),
@@ -91,6 +104,7 @@ class _BookState extends State<Book> {
           ),
         ),
       ),
+
       bottomNavigationBar: Buttom(0),
     );
   }

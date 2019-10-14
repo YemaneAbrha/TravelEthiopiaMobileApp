@@ -3,7 +3,9 @@ import 'package:travel_ethiopia/pages/common/buttombarnavigation.dart';
 import 'package:travel_ethiopia/pages/common/basicappbar.dart';
 
 class HomeScreen extends StatefulWidget {
-  //final dateFormat = DateFormat();
+  // final buses;
+  var buses;
+  // HomeScreen(this.products);
   HomeScreen(BuildContext context);
   @override
   _HomeScreenState createState() => _HomeScreenState();
@@ -16,10 +18,60 @@ class _HomeScreenState extends State<HomeScreen> {
     // _saveCurrentRoute("/HomeScreen");
   }
 
+  Widget _buildBusItem(BuildContext context, int index) {
+    return Card(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          const ListTile(
+            leading: Icon(Icons.directions_bus),
+            title: Text(""),
+            subtitle: Text("From: To: For: At: Price: ETB"),
+          ),
+          ButtonTheme.bar(
+            child: ButtonBar(
+              children: <Widget>[
+                FlatButton(
+                  child: const Text("BUY TICKET"),
+                  onPressed: () {},
+                ),
+                FlatButton(
+                  child: const Text("MORE"),
+                  onPressed: () {},
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildBusList() {
+    Widget busCards;
+    try {
+      if (widget.buses.length > 1) {
+        busCards = ListView.builder(
+          itemBuilder: _buildBusItem,
+          itemCount: widget.buses.lenght,
+        );
+      } else {
+        busCards = Container();
+      }
+    } catch (e) {
+      busCards = Container(
+        child: Center(
+          child: Text("Server Error "),
+        ),
+      );
+    }
+    return busCards;
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: BasicAppBar.getAppBar(),
+      appBar: BasicAppBar.getAppBar(context),
       backgroundColor: Color.fromRGBO(230, 230, 230, 1.0),
       body: Container(
         padding: EdgeInsets.fromLTRB(32.0, 0.0, 32.0, 0.0),

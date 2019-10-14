@@ -35,7 +35,7 @@ class _SelectBusPageState extends State<SelectBusPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: BasicAppBar.getAppBar(),
+      appBar: BasicAppBar.getAppBar(context),
       backgroundColor: Color.fromRGBO(230, 230, 230, 1.0),
       body: Container(
         padding: EdgeInsets.all(32.0),
