@@ -35,7 +35,7 @@ class _BookState extends State<Book> {
       // drawer: BasicDrawer(),
       backgroundColor: Color.fromRGBO(230, 230, 230, 1.0),
       body: Container(
-        padding: EdgeInsets.fromLTRB(10.0, 32.0, 10.0, 32.0),
+        padding: EdgeInsets.fromLTRB(30.0, 32.0, 30.0, 32.0),
         child: Center(
           child: ListView(
             children: <Widget>[
@@ -69,13 +69,14 @@ class _BookState extends State<Book> {
                   });
                 },
               ),
+
               // ListView(
               //   children: <Widget>[
 
               //   ],
               // ),
               SizedBox(
-                height: 10.0,
+                height: 16.0,
               ),
               DateTimePickerFormField(
                 inputType: InputType.date,
@@ -89,7 +90,7 @@ class _BookState extends State<Book> {
                     hasFloatingPlaceholder: false),
               ),
 
-              SizedBox(height: 10.0),
+              SizedBox(height: 16.0),
 
               TextField(
                 decoration: InputDecoration(
@@ -99,7 +100,7 @@ class _BookState extends State<Book> {
                 ),
               ),
               SizedBox(
-                height: 10.0,
+                height: 16.0,
               ),
 
               TextField(
@@ -116,7 +117,7 @@ class _BookState extends State<Book> {
                 },
               ),
               SizedBox(
-                height: 10.0,
+                height: 16.0,
               ),
               Center(
                 child: RaisedButton(

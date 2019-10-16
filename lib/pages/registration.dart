@@ -23,12 +23,15 @@ class _RegistrtionPageState extends State<RegistrationPage> {
       ),
       backgroundColor: Color.fromRGBO(230, 230, 230, 1.0),
       body: Container(
-        padding: EdgeInsets.fromLTRB(10.0, 20.0, 20.0, 10.0),
+        padding: EdgeInsets.fromLTRB(30.0, 50.0, 30.0, 10.0),
         child: Center(
           child: ListView(
             children: <Widget>[
               TextField(
-                decoration: new InputDecoration(labelText: "Full Name *"),
+                decoration: new InputDecoration(
+                    labelText: "Full Name *",
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10.0))),
                 keyboardType: TextInputType.text,
                 onChanged: (String value) {
                   setState(() {
@@ -36,8 +39,14 @@ class _RegistrtionPageState extends State<RegistrationPage> {
                   });
                 },
               ),
+              SizedBox(
+                height: 25.0,
+              ),
               TextField(
-                decoration: new InputDecoration(labelText: "Phone Number"),
+                decoration: new InputDecoration(
+                    labelText: "Phone Number",
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10.0))),
                 keyboardType: TextInputType.phone,
                 onChanged: (String value) {
                   setState(() {
@@ -45,32 +54,6 @@ class _RegistrtionPageState extends State<RegistrationPage> {
                   });
                 },
               ),
-              TextField(
-                decoration: new InputDecoration(labelText: "Email"),
-                keyboardType: TextInputType.emailAddress,
-                onChanged: (String value) {
-                  setState(() {
-                    //_EmailValue = value;
-                  });
-                },
-              ),
-              TextField(
-                decoration: new InputDecoration(labelText: "Agent UserName"),
-                keyboardType: TextInputType.emailAddress,
-                onChanged: (String value) {
-                  setState(() {
-                    //_agentUserName = value;
-                  });
-                },
-              ),
-              // Center(
-              //   child: RaisedButton(
-              //     child: Text("Submit"),
-              //     onPressed: () {
-              //       //Register User and redirect to Home Page.
-              //     },
-              //   ),
-              // )
               SizedBox(
                 height: 20.0,
               ),

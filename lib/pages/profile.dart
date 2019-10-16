@@ -31,6 +31,7 @@ class _UserProfileState extends State<UserProfile> {
       appBar: BasicAppBar.getAppBar(context),
       backgroundColor: Color.fromRGBO(230, 230, 230, 1.0),
       body: Container(
+        padding: EdgeInsets.fromLTRB(30.0, 50.0, 30.0, 10.0),
         child: ListView(
           children: <Widget>[
             // new Container(
@@ -62,7 +63,7 @@ class _UserProfileState extends State<UserProfile> {
               showInitialTextAbovePicture: true,
             ),
             SizedBox(
-              height: 15.0,
+              height: 30.0,
             ),
             new Center(
                 child: new TextFormField(
@@ -70,6 +71,7 @@ class _UserProfileState extends State<UserProfile> {
               textAlign: TextAlign.center,
               decoration: InputDecoration(
                   icon: Icon(Icons.person),
+                  labelText: "Full Name *",
                   border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(7.0))),
               controller: _fullnamecontroller,
@@ -81,13 +83,14 @@ class _UserProfileState extends State<UserProfile> {
               },
             )),
             SizedBox(
-              height: 15.0,
+              height: 30.0,
             ),
             new Center(
               child: new TextFormField(
                 textAlign: TextAlign.center,
                 decoration: InputDecoration(
                     icon: Icon(Icons.call),
+                    labelText: "Phone Number",
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(7.0))),
                 controller: _phonenumbercontroller,
@@ -101,25 +104,9 @@ class _UserProfileState extends State<UserProfile> {
               //  child: new Text("+251913706986"),
             ),
             SizedBox(
-              height: 15.0,
+              height: 30.0,
             ),
-            new Center(
-              child: new TextFormField(
-                textAlign: TextAlign.center,
-                keyboardType: TextInputType.emailAddress,
-                decoration: InputDecoration(
-                    icon: Icon(Icons.email),
-                    border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(7.0))),
-                controller: _emailcontroller,
-                validator: (value) {
-                  if (value.isEmpty) {
-                    return "Enter Valid Email";
-                  } else
-                    return null;
-                },
-              ),
-            ),
+
             new Center(
               child: FlatButton(
                 child: Text("Submit"),
