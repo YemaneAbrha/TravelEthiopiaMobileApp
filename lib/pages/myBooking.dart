@@ -3,6 +3,24 @@ import 'package:travel_ethiopia/pages/common/basicappbar.dart';
 import 'package:travel_ethiopia/pages/common/buttombarnavigation.dart';
 
 class MyBookingPage extends StatefulWidget {
+  String busName;
+  String bookId;
+  String from;
+  String to;
+  String departureTime;
+  String departureDate;
+  double price;
+  String status;
+  MyBookingPage(Map<String, dynamic> myBooking) {
+    busName = myBooking['busName'];
+    bookId = myBooking['bookId'];
+    from = myBooking['from'];
+    to = myBooking['to'];
+    departureTime = myBooking['departureTime'];
+    departureDate = myBooking['departureDate'];
+    price = myBooking['price'];
+    status = myBooking['status'];
+  }
   _MyBookingPageState createState() => _MyBookingPageState();
 }
 

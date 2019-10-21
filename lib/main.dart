@@ -17,9 +17,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Travel Ethiopia',
+      //title: 'Travel Ethiopia',
       routes: <String, WidgetBuilder>{
-        "/mybooking": (BuildContext context) => MyBookingPage(),
+        // "/mybooking": (BuildContext context) =>
+        //     MyBookingPage(Map<any> mybooking),
         "/selectBus": (BuildContext context) => SelectBusPage(),
         "/book": (BuildContext context) => Book(context),
         "/help": (BuildContext context) => HelpPage(context),

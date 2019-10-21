@@ -4,7 +4,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
-import 'package:travel_ethiopia/functions/getToken.dart';
+import 'package:travel_ethiopia/functions/getUserInfo.dart';
 import 'package:travel_ethiopia/functions/saveLogout.dart';
 import 'package:travel_ethiopia/model/json/loginModel.dart';
 

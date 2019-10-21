@@ -21,13 +21,13 @@ class ButtonState extends State<Buttom> {
       onItemSelected: (index) => setState(() {
         widget.currentIndex = index;
         if (index == 0) {
-          Navigator.pushNamed(context, '/book');
+          Navigator.pushReplacementNamed(context, '/book');
         } else if (index == 1) {
-          Navigator.pushNamed(context, '/mybooking');
+          Navigator.pushReplacementNamed(context, '/mybooking');
         } else if (index == 2) {
-          Navigator.pushNamed(context, '/allbus');
+          Navigator.pushReplacementNamed(context, '/allbus');
         } else {
-          Navigator.pushNamed(context, '/help');
+          Navigator.pushReplacementNamed(context, '/help');
         }
       }),
       items: [
