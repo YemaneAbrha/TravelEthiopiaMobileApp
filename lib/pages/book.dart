@@ -50,7 +50,7 @@ class _BookState extends State<Book> {
                   new Flexible(
                     child: new TextField(
                       decoration: new InputDecoration(
-                          icon: Icon(Icons.trip_origin),
+                          icon: Icon(Icons.flight_takeoff),
                           labelText: " From *",
                           border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(10.0))),
@@ -68,7 +68,7 @@ class _BookState extends State<Book> {
                   new Flexible(
                     child: new TextField(
                       decoration: new InputDecoration(
-                          // icon: Icon(Icons.trip_origin),
+                          icon: Icon(Icons.flight_land),
                           labelText: "To * ",
                           border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(10.0))),
@@ -124,7 +124,7 @@ class _BookState extends State<Book> {
                       },
                     )
                   : SwitchListTile(
-                      title: const Text("Pay by other phone"),
+                      title: const Text("Pay By Other Phone"),
                       value: false,
                       onChanged: (bool value) {
                         setState(() {
