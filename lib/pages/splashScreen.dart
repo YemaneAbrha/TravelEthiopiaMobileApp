@@ -13,7 +13,7 @@ class _SplashScreenPage extends State<SplashScreenPage> {
   @override
   Widget build(BuildContext context) {
     return new SplashScreen(
-      seconds: 5,
+      seconds: 1,
       navigateAfterSeconds: new RegistrationPage(context),
       // title: new Text(
       //   ' ጉዞ ',

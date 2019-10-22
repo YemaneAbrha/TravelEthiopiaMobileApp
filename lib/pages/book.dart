@@ -22,6 +22,7 @@ class _BookState extends State<Book> {
   TimeOfDay time;
   bool _payByOtherPhone = false;
   List _departureTimes = ["Mornnig", "Afternoon"];
+  List _labels = ["From *", "To * ", "Departure Time"];
   List _cities = [
     "Addis Ababa",
     "Bahrdar",
@@ -47,37 +48,31 @@ class _BookState extends State<Book> {
   ];
   List<DropdownMenuItem<String>> _citiesdropDownMenuItem;
   List<DropdownMenuItem<String>> _departureTimeDropDownMenuItem;
+  List<DropdownMenuItem<String>> _labelDropDownMenuItem;
   String _departure_city;
   String _destination_city;
   String _departureTime;
+
   void initState() {
     super.initState();
-    _citiesdropDownMenuItem = getcitiesDropDownMenuItem();
-    _departureTimeDropDownMenuItem = getdepartureTimeDropDownMenuItem();
-    _departure_city = _citiesdropDownMenuItem[0].value;
-    _destination_city = _citiesdropDownMenuItem[9].value;
-    _departureTime = _departureTimeDropDownMenuItem[0].value;
+    _citiesdropDownMenuItem = getDropDownMenuItem(_cities);
+    _departureTimeDropDownMenuItem = getDropDownMenuItem(_departureTimes);
+    _labelDropDownMenuItem = getDropDownMenuItem(_labels);
+    //_departure_city = _citiesdropDownMenuItem[0].value;
+    //_destination_city = _citiesdropDownMenuItem[9].value;
+    // _departureTime = _citiesdropDownMenuItem[0].value;
+    // _departureTime = _departureTimeDropDownMenuItem[0].value;
   }
 
-  List<DropdownMenuItem<String>> getcitiesDropDownMenuItem() {
+  List<DropdownMenuItem<String>> getDropDownMenuItem(List _menuItems) {
     List<DropdownMenuItem<String>> items = new List();
-    for (String city in _cities) {
+    for (String item in _menuItems) {
       items.add(new DropdownMenuItem(
-        value: city,
-        child: new Text(city),
+        value: item,
+        child: new Text(item),
       ));
     }
     return items;
-  }
-
-  List<DropdownMenuItem<String>> getdepartureTimeDropDownMenuItem() {
-    List<DropdownMenuItem<String>> items = new List();
-    for (String departureTime in _departureTimes) {
-      items.add(new DropdownMenuItem(
-        value: departureTime,
-        child: new Text(departureTime),
-      ));
-    }
   }
 
   @override
@@ -101,13 +96,11 @@ class _BookState extends State<Book> {
                     Icons.flight,
                   ),
                   new SizedBox(
-                    width: 5,
+                    width: 15,
                   ),
-                  new Text("From: "),
-                  new SizedBox(
-                    width: 5,
-                  ),
+
                   new DropdownButton(
+                    hint: new Text("FROME *"),
                     value: _departure_city,
                     items: _citiesdropDownMenuItem,
                     onChanged: (String value) {
@@ -117,14 +110,12 @@ class _BookState extends State<Book> {
                     },
                   ),
                   new SizedBox(
-                    width: 15.0,
+                    width: 20.0,
                   ),
-                  new Text("TO:"),
-                  new SizedBox(
-                    width: 10.0,
-                  ),
+
                   new DropdownButton(
                     value: _destination_city,
+                    hint: new Text("TO *"),
                     items: _citiesdropDownMenuItem,
                     onChanged: (String value) {
                       setState(() {
@@ -152,23 +143,26 @@ class _BookState extends State<Book> {
                     hasFloatingPlaceholder: false),
               ),
               SizedBox(height: 16.0),
-              // TextField(
-              //   decoration: InputDecoration(
-              //     icon: Icon(Icons.departure_board),
-              //     labelText: 'Departure Time *',
-              //     border: OutlineInputBorder(
-              //         borderRadius: BorderRadius.circular(10.0)),
-              //   ),
-              // ),
-              new DropdownButton(
-                value: _departureTime,
-                items: _departureTimeDropDownMenuItem,
-                onChanged: (String value) {
-                  setState(() {
-                    _departureTime = value;
-                  });
-                },
+
+              new Row(
+                children: <Widget>[
+                  const Icon(Icons.departure_board),
+                  SizedBox(
+                    width: 20,
+                  ),
+                  new DropdownButton(
+                    hint: new Text("Departure Time *"),
+                    value: _departureTime,
+                    items: _departureTimeDropDownMenuItem,
+                    onChanged: (String value) {
+                      setState(() {
+                        _departureTime = value;
+                      });
+                    },
+                  ),
+                ],
               ),
+
               SizedBox(
                 height: 16.0,
               ),
