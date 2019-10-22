@@ -18,6 +18,7 @@ environment:
 
 dependencies:
   # titled_navigation_bar: ^3.5.0
+  dropdownfield: 1.0.0
   splashscreen: ^1.2.0
   bottom_navy_bar:
   intl: ^0.15.8

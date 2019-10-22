@@ -1,4 +1,5 @@
 import 'dart:ffi';
+import 'package:dropdownfield/dropdownfield.dart';
 
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
@@ -20,25 +21,72 @@ class _BookState extends State<Book> {
   DateTime date;
   TimeOfDay time;
   bool _payByOtherPhone = false;
-  @override
+  List _departureTimes = ["Mornnig", "Afternoon"];
+  List _cities = [
+    "Addis Ababa",
+    "Bahrdar",
+    "Awassa",
+    "Gonder",
+    "Mekelle",
+    "Dilla",
+    "Ambo",
+    "Assosa",
+    "Semera",
+    "Asmera",
+    "Alamata",
+    "Shire",
+    "Axum",
+    "Lalibela",
+    "Debre-Markos",
+    "Welayta",
+    "Wollega",
+    "Humera",
+    "Dessie",
+    "Woldya",
+    "Nakfa",
+  ];
+  List<DropdownMenuItem<String>> _citiesdropDownMenuItem;
+  List<DropdownMenuItem<String>> _departureTimeDropDownMenuItem;
+  String _departure_city;
+  String _destination_city;
+  String _departureTime;
   void initState() {
     super.initState();
-    // _saveCurrentRoute("/HomeScreen");
+    _citiesdropDownMenuItem = getcitiesDropDownMenuItem();
+    _departureTimeDropDownMenuItem = getdepartureTimeDropDownMenuItem();
+    _departure_city = _citiesdropDownMenuItem[0].value;
+    _destination_city = _citiesdropDownMenuItem[9].value;
+    _departureTime = _departureTimeDropDownMenuItem[0].value;
   }
 
-  // _saveCurrentRoute(String lastRoute) async {
-  //   SharedPreferences preferences = await SharedPreferences.getInstance();
-  //   await preferences.setString('LastScreenRoute', lastRoute);
-  // }
+  List<DropdownMenuItem<String>> getcitiesDropDownMenuItem() {
+    List<DropdownMenuItem<String>> items = new List();
+    for (String city in _cities) {
+      items.add(new DropdownMenuItem(
+        value: city,
+        child: new Text(city),
+      ));
+    }
+    return items;
+  }
+
+  List<DropdownMenuItem<String>> getdepartureTimeDropDownMenuItem() {
+    List<DropdownMenuItem<String>> items = new List();
+    for (String departureTime in _departureTimes) {
+      items.add(new DropdownMenuItem(
+        value: departureTime,
+        child: new Text(departureTime),
+      ));
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: BasicAppBar.getAppBar(context),
-      // drawer: BasicDrawer(),
       backgroundColor: Color.fromRGBO(230, 230, 230, 1.0),
       body: Container(
-        padding: EdgeInsets.fromLTRB(30.0, 50.0, 30.0, 32.0),
+        padding: EdgeInsets.fromLTRB(10.0, 50.0, 30.0, 32.0),
         child: Center(
           child: ListView(
             children: <Widget>[
@@ -47,41 +95,47 @@ class _BookState extends State<Book> {
               ),
               new Row(
                 children: <Widget>[
-                  new Flexible(
-                    child: new TextField(
-                      decoration: new InputDecoration(
-                          icon: Icon(Icons.flight_takeoff),
-                          labelText: " From *",
-                          border: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(10.0))),
-                      keyboardType: TextInputType.text,
-                      onChanged: (String value) {
-                        setState(() {
-                          //_titleValue = value;
-                        });
-                      },
-                    ),
+                  // new ListView(
+                  //   children: <Widget>[
+                  const Icon(
+                    Icons.flight,
                   ),
                   new SizedBox(
-                    width: 20.0,
+                    width: 5,
                   ),
-                  new Flexible(
-                    child: new TextField(
-                      decoration: new InputDecoration(
-                          icon: Icon(Icons.flight_land),
-                          labelText: "To * ",
-                          border: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(10.0))),
-                      keyboardType: TextInputType.text,
-                      onChanged: (String value) {
-                        setState(() {
-                          //_titleValue = value;
-                        });
-                      },
-                    ),
+                  new Text("From: "),
+                  new SizedBox(
+                    width: 5,
+                  ),
+                  new DropdownButton(
+                    value: _departure_city,
+                    items: _citiesdropDownMenuItem,
+                    onChanged: (String value) {
+                      setState(() {
+                        _departure_city = value;
+                      });
+                    },
+                  ),
+                  new SizedBox(
+                    width: 15.0,
+                  ),
+                  new Text("TO:"),
+                  new SizedBox(
+                    width: 10.0,
+                  ),
+                  new DropdownButton(
+                    value: _destination_city,
+                    items: _citiesdropDownMenuItem,
+                    onChanged: (String value) {
+                      setState(() {
+                        _destination_city = value;
+                      });
+                    },
                   ),
                 ],
               ),
+              //   ],
+              // ),
               SizedBox(
                 height: 16.0,
               ),
@@ -98,13 +152,22 @@ class _BookState extends State<Book> {
                     hasFloatingPlaceholder: false),
               ),
               SizedBox(height: 16.0),
-              TextField(
-                decoration: InputDecoration(
-                  icon: Icon(Icons.departure_board),
-                  labelText: 'Departure Time *',
-                  border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(10.0)),
-                ),
+              // TextField(
+              //   decoration: InputDecoration(
+              //     icon: Icon(Icons.departure_board),
+              //     labelText: 'Departure Time *',
+              //     border: OutlineInputBorder(
+              //         borderRadius: BorderRadius.circular(10.0)),
+              //   ),
+              // ),
+              new DropdownButton(
+                value: _departureTime,
+                items: _departureTimeDropDownMenuItem,
+                onChanged: (String value) {
+                  setState(() {
+                    _departureTime = value;
+                  });
+                },
               ),
               SizedBox(
                 height: 16.0,
@@ -138,7 +201,8 @@ class _BookState extends State<Book> {
               ),
               Center(
                 child: RaisedButton(
-                  child: Text("Submit"),
+                  child: Text("Check Availiablity"),
+                  color: Color.fromRGBO(0, 136, 204, 0.8),
                   onPressed: () {
                     setState(() {
                       Navigator.pushNamed(context, '/selectBus');
@@ -150,7 +214,6 @@ class _BookState extends State<Book> {
           ),
         ),
       ),
-
       bottomNavigationBar: Buttom(0),
     );
   }
