@@ -195,7 +195,7 @@ class _BookState extends State<Book> {
               ),
               Center(
                 child: RaisedButton(
-                  child: Text("Check Availiablity"),
+                  child: Text("Check Availiable Buses"),
                   color: Color.fromRGBO(0, 136, 204, 0.8),
                   onPressed: () {
                     setState(() {

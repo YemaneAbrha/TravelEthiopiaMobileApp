@@ -65,13 +65,13 @@ class _RegistrtionPageState extends State<RegistrationPage> {
                   //Wrap with Material
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(50.0)),
-                  // elevation: 18.0,
-                  color: Colors.lightGreen[800],
+                  //elevation: 18.0,
+                  color: Color.fromRGBO(0, 136, 204, 0.8),
                   clipBehavior: Clip.antiAliasWithSaveLayer, // Add This
                   child: MaterialButton(
                     minWidth: 100.0,
                     height: 35,
-                    color: Colors.lightGreen[800],
+                    color: Color.fromRGBO(0, 136, 204, 0.8),
                     child: new Text(' SUBMIT',
                         style:
                             new TextStyle(fontSize: 16.0, color: Colors.white)),
