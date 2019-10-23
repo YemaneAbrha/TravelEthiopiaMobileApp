@@ -79,7 +79,8 @@ class _BookState extends State<Book> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: BasicAppBar.getAppBar(context),
-      backgroundColor: Color.fromRGBO(230, 230, 230, 1.0),
+      //backgroundColor: Color.fromRGBO(230, 230, 230, 1.0),
+      backgroundColor: Colors.white,
       body: Container(
         padding: EdgeInsets.fromLTRB(10.0, 50.0, 30.0, 32.0),
         child: Center(
