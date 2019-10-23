@@ -113,9 +113,18 @@ class _UserProfileState extends State<UserProfile> {
             ),
 
             new Center(
-              child: FlatButton(
+              child: MaterialButton(
+                height: 45.0,
+                minWidth: 150.0,
                 color: Color.fromRGBO(0, 136, 204, 0.8),
-                child: Text("Change Profile"),
+                child: Text(
+                  "Change Profile",
+                  style: new TextStyle(
+                    fontSize: 16.0,
+                    color: Colors.white,
+                  ),
+                ),
+                shape: StadiumBorder(),
                 onPressed: () {
                   //call the back end to update the profile;
                 },

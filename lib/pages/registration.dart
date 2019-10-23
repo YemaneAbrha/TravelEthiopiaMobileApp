@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'package:travel_ethiopia/pages/common/basicappbar.dart';
-
 class RegistrationPage extends StatefulWidget {
   RegistrationPage(BuildContext context);
   _RegistrtionPageState createState() => _RegistrtionPageState();
@@ -61,25 +59,21 @@ class _RegistrtionPageState extends State<RegistrationPage> {
               ),
               Padding(
                 padding: EdgeInsets.fromLTRB(70.0, 0.0, 50.0, 0.0),
-                child: Material(
-                  //Wrap with Material
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(50.0)),
-                  //elevation: 18.0,
+                child: MaterialButton(
+                  shape: StadiumBorder(),
+                  minWidth: 150.0,
+                  height: 45,
                   color: Color.fromRGBO(0, 136, 204, 0.8),
-                  clipBehavior: Clip.antiAliasWithSaveLayer, // Add This
-                  child: MaterialButton(
-                    minWidth: 100.0,
-                    height: 35,
-                    color: Color.fromRGBO(0, 136, 204, 0.8),
-                    child: new Text(' SUBMIT',
-                        style:
-                            new TextStyle(fontSize: 16.0, color: Colors.white)),
-                    onPressed: () {
-                      Navigator.pushReplacementNamed(context, '/allbus');
-                    },
-                  ),
+                  child: new Text(' SUBMIT',
+                      style: new TextStyle(
+                        fontSize: 16.0,
+                        color: Colors.white,
+                      )),
+                  onPressed: () {
+                    Navigator.pushReplacementNamed(context, '/allbus');
+                  },
                 ),
+                // ),
               ),
             ],
           ),

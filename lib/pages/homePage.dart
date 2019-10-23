@@ -86,7 +86,7 @@ class _HomeScreenState extends State<HomeScreen> {
         children: <Widget>[
           new ListTile(
             leading: Icon(Icons.directions_bus),
-            title: Text(widget.buses[index]["bus_title"]),
+            title: Text("\t\t" + widget.buses[index]["bus_title"]),
             subtitle: Text("From:" +
                 widget.buses[index]["From"] +
                 "\n" +
