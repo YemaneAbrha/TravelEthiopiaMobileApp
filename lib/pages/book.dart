@@ -374,6 +374,12 @@ class _BookState extends State<Book> {
                     },
                   ),
                 ),
+                new Text(
+                  "YEMANE",
+                  style: TextStyle(
+                    fontFamily: 'Raleway',
+                  ),
+                )
               ],
             ),
           )),

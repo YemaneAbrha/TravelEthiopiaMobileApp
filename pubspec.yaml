@@ -71,20 +71,8 @@ flutter:
   # example:
    # Fonts
   fonts:
-   - family: Handlee
-     fonts:
-       - asset: fonts/Handlee-Regular.ttf
-   - family: Gochi Hand
-     fonts:
-       - asset: fonts/GochiHand-Regular.ttf
-   - family: Monoton
-     fonts:
-       - asset: fonts/Monoton-Regular.ttf
-   - family: Neucha
-     fonts:
-       - asset: fonts/Neucha.ttf
-   - family: Prata
-     fonts:
-       - asset: fonts/Prata-Regular.ttf
+  - family: Raleway
+    fonts:
+    - asset: assets/fonts/Raleway-Medium.ttf
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages

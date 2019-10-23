@@ -13,11 +13,10 @@ import 'package:travel_ethiopia/pages/splashScreen.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      //title: 'Travel Ethiopia',
+      //theme: ThemeData(fontFamily: 'DancingScript'),
       routes: <String, WidgetBuilder>{
         // "/mybooking": (BuildContext context) =>
         //     MyBookingPage(Map<any> mybooking),
