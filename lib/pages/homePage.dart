@@ -87,15 +87,19 @@ class _HomeScreenState extends State<HomeScreen> {
           new ListTile(
             leading: Icon(Icons.directions_bus),
             title: Text(widget.buses[index]["bus_title"]),
-            subtitle: Text("From: " +
+            subtitle: Text("From:" +
                 widget.buses[index]["From"] +
-                "   To: " +
+                "\n" +
+                "To: " +
                 widget.buses[index]["To"] +
-                "   Departure Date :  " +
+                "\n" +
+                "Departure Date :  " +
                 widget.buses[index]["departure_date"] +
-                "   departure Time: " +
+                "\n" +
+                "Departure Time: " +
                 widget.buses[index]["departure_time"] +
-                "   Price: ETB  " +
+                "\n" +
+                "Price: ETB  " +
                 widget.buses[index]["price"]),
           ),
           ButtonTheme.bar(
