@@ -4,8 +4,9 @@ class BasicAppBar {
   static getAppBar(BuildContext context) {
     return AppBar(
       title: Text(
-        "ጉዞ ፥ ኢትዮጵያ",
-        style: TextStyle(color: Colors.white),
+        "ጉዞ ፥ Ethiopia  ",
+        style:
+            TextStyle(fontFamily: "Pridi", color: Colors.white, fontSize: 16.0),
       ),
       actions: <Widget>[
         IconButton(

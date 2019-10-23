@@ -29,6 +29,11 @@ class _RegistrtionPageState extends State<RegistrationPage> {
                 decoration: new InputDecoration(
                     icon: Icon(Icons.person),
                     labelText: "Full Name *",
+                    labelStyle: TextStyle(
+                      fontFamily: 'Raleway',
+                      color: Colors.black,
+                      fontSize: 20.0,
+                    ),
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10.0))),
                 keyboardType: TextInputType.text,
@@ -44,7 +49,12 @@ class _RegistrtionPageState extends State<RegistrationPage> {
               TextField(
                 decoration: new InputDecoration(
                     icon: Icon(Icons.phone),
-                    labelText: "Phone Number",
+                    labelText: "Phone Number *",
+                    labelStyle: TextStyle(
+                      fontFamily: 'Raleway',
+                      color: Colors.black,
+                      fontSize: 20.0,
+                    ),
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10.0))),
                 keyboardType: TextInputType.phone,

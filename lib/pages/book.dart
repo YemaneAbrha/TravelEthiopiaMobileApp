@@ -155,7 +155,10 @@ class _BookState extends State<Book> {
                     ),
                   ],
                 ),
-                Divider(height: 20.0, color: Theme.of(context).primaryColor),
+                // Divider(height: 20.0, color: Theme.of(context).primaryColor),
+                SizedBox(
+                  height: 20.0,
+                ),
                 DateTimePickerFormField(
                   inputType: InputType.date,
                   format: dateFormat,
@@ -173,7 +176,10 @@ class _BookState extends State<Book> {
                           borderRadius: BorderRadius.circular(10.0)),
                       hasFloatingPlaceholder: false),
                 ),
-                Divider(height: 20.0, color: Theme.of(context).primaryColor),
+                SizedBox(
+                  height: 20.0,
+                ),
+                // Divider(height: 20.0, color: Theme.of(context).primaryColor),
                 new Row(
                   children: <Widget>[
                     const Icon(Icons.departure_board),
@@ -199,7 +205,10 @@ class _BookState extends State<Book> {
                     ),
                   ],
                 ),
-                Divider(height: 20.0, color: Theme.of(context).primaryColor),
+                SizedBox(
+                  height: 20.0,
+                ),
+                // Divider(height: 20.0, color: Theme.of(context).primaryColor),
                 _payByOtherPhone
                     ? TextField(
                         decoration: new InputDecoration(
@@ -236,7 +245,10 @@ class _BookState extends State<Book> {
                         },
                         secondary: const Icon(Icons.phone),
                       ),
-                Divider(height: 30.0, color: Theme.of(context).primaryColor),
+                SizedBox(
+                  height: 20.0,
+                ),
+                // Divider(height: 30.0, color: Theme.of(context).primaryColor),
                 Center(
                   child: MaterialButton(
                     child: Text("Check Availiable Buses",
@@ -254,12 +266,6 @@ class _BookState extends State<Book> {
                     },
                   ),
                 ),
-                new Text(
-                  "YEMANE",
-                  style: TextStyle(
-                    fontFamily: 'Raleway',
-                  ),
-                )
               ],
             ),
           )),

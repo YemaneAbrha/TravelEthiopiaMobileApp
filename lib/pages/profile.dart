@@ -77,6 +77,11 @@ class _UserProfileState extends State<UserProfile> {
               decoration: InputDecoration(
                   icon: Icon(Icons.person),
                   labelText: "Full Name *",
+                  labelStyle: TextStyle(
+                    fontFamily: 'Raleway',
+                    color: Colors.black,
+                    fontSize: 20.0,
+                  ),
                   border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(7.0))),
               controller: _fullnamecontroller,
@@ -96,6 +101,11 @@ class _UserProfileState extends State<UserProfile> {
                 decoration: InputDecoration(
                     icon: Icon(Icons.call),
                     labelText: "Phone Number",
+                    labelStyle: TextStyle(
+                      fontFamily: 'Raleway',
+                      color: Colors.black,
+                      fontSize: 20.0,
+                    ),
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(7.0))),
                 controller: _phonenumbercontroller,

@@ -74,5 +74,8 @@ flutter:
   - family: Raleway
     fonts:
     - asset: assets/fonts/Raleway-Medium.ttf
+  - family: Pridi
+    fonts:
+    - asset: assets/fonts/Pridi-300.ttf  
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
