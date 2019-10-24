@@ -52,11 +52,11 @@ class _MyBookingPageState extends State<MyBookingPage> {
             tabs: <Widget>[
               Tab(
                 icon: Icon(Icons.card_travel),
-                text: 'My Booking',
+                text: 'Up Comming',
               ),
               Tab(
                 icon: Icon(Icons.history),
-                text: 'Past',
+                text: 'Past Booking',
               ),
             ],
           ),

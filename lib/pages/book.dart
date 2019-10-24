@@ -221,7 +221,7 @@ class _BookState extends State<Book> {
                             ),
                             border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(10.0))),
-                        keyboardType: TextInputType.text,
+                        keyboardType: TextInputType.phone,
                         onChanged: (String value) {
                           setState(() {
                             //_titleValue = value;

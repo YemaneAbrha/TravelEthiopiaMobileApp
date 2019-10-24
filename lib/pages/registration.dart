@@ -25,6 +25,9 @@ class _RegistrtionPageState extends State<RegistrationPage> {
         child: Center(
           child: ListView(
             children: <Widget>[
+              SizedBox(
+                height: 10.0,
+              ),
               TextField(
                 decoration: new InputDecoration(
                     icon: Icon(Icons.person),

@@ -45,8 +45,8 @@ class ButtonState extends State<Buttom> {
             title: Text('All Bus'),
             activeColor: Colors.blue),
         BottomNavyBarItem(
-            icon: Icon(Icons.history),
-            title: Text('History'),
+            icon: Icon(Icons.more),
+            title: Text('More'),
             activeColor: Colors.blue),
       ],
     );
