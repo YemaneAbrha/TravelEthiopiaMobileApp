@@ -13,7 +13,7 @@ class BasicAppBar {
           icon: Icon(Icons.person),
           onPressed: () {
             // Navigator.pushNamed(context, 'profile');
-            Navigator.pushNamed(context, '/profile');
+            Navigator.pushReplacementNamed(context, '/profile');
           },
         ),
       ],

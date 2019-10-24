@@ -49,10 +49,10 @@ Future myBooking(BuildContext context) async {
       'price': responseJson['price'],
       'status': responseJson['status']
     };
-    Navigator.pushReplacement(
-        context,
-        new MaterialPageRoute(
-            builder: (BuildContext context) => new MyBookingPage(myBooking)));
+    //   Navigator.pushReplacement(
+    //       context,
+    //       new MaterialPageRoute(
+    //           builder: (BuildContext context) => new MyBookingPage(myBooking)));
   }
 }
 

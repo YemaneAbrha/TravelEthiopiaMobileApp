@@ -18,8 +18,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       //theme: ThemeData(fontFamily: 'DancingScript'),
       routes: <String, WidgetBuilder>{
-        // "/mybooking": (BuildContext context) =>
-        //     MyBookingPage(Map<any> mybooking),
+        "/mybooking": (BuildContext context) => MyBookingPage(),
         "/selectBus": (BuildContext context) => SelectBusPage(),
         "/book": (BuildContext context) => Book(context),
         "/help": (BuildContext context) => HelpPage(context),
