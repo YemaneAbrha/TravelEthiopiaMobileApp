@@ -42,7 +42,7 @@ class _MyBookingPageState extends State<MyBookingPage> {
               icon: Icon(Icons.person),
               onPressed: () {
                 // Navigator.pushNamed(context, 'profile');
-                Navigator.pushNamed(context, '/profile');
+                Navigator.pushReplacementNamed(context, '/profile');
               },
             ),
           ],
@@ -51,14 +51,21 @@ class _MyBookingPageState extends State<MyBookingPage> {
           bottom: TabBar(
             tabs: <Widget>[
               Tab(
-                icon: Icon(Icons.card_travel),
+                icon: Icon(
+                  Icons.card_travel,
+                  color: Colors.black,
+                ),
                 text: 'Up Comming',
               ),
               Tab(
-                icon: Icon(Icons.history),
+                icon: Icon(
+                  Icons.history,
+                  color: Colors.black,
+                ),
                 text: 'Past Booking',
               ),
             ],
+            indicatorColor: Colors.white,
           ),
         ),
         backgroundColor: Color.fromRGBO(230, 230, 230, 1.0),
