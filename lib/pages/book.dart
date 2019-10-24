@@ -170,7 +170,7 @@ class _BookState extends State<Book> {
                       labelStyle: TextStyle(
                         fontFamily: 'Raleway',
                         color: Colors.black,
-                        fontSize: 20.0,
+                        fontSize: 16.0,
                       ),
                       border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10.0)),
@@ -192,7 +192,7 @@ class _BookState extends State<Book> {
                         style: TextStyle(
                           fontFamily: 'Raleway',
                           color: Colors.black,
-                          fontSize: 20.0,
+                          fontSize: 16.0,
                         ),
                       ),
                       value: _departureTime,
@@ -217,7 +217,7 @@ class _BookState extends State<Book> {
                             labelStyle: TextStyle(
                               fontFamily: 'Raleway',
                               color: Colors.black,
-                              fontSize: 20.0,
+                              fontSize: 16.0,
                             ),
                             border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(10.0))),
@@ -234,7 +234,7 @@ class _BookState extends State<Book> {
                           style: TextStyle(
                             fontFamily: 'Raleway',
                             color: Colors.black,
-                            fontSize: 20.0,
+                            fontSize: 16.0,
                           ),
                         ),
                         value: false,

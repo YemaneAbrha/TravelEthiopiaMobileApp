@@ -34,15 +34,6 @@ class _UserProfileState extends State<UserProfile> {
         padding: EdgeInsets.fromLTRB(30.0, 50.0, 30.0, 10.0),
         child: ListView(
           children: <Widget>[
-            // new Container(
-            //     width: 190.0,
-            //     height: 190.0,
-            //     decoration: new BoxDecoration(
-            //         shape: BoxShape.circle,
-            //         image: new DecorationImage(
-            //             fit: BoxFit.none,
-            //             image: new NetworkImage(
-            //                 "https://i.imgur.com/BoN9kdC.png")))),
             SizedBox(
               height: 10.0,
             ),
@@ -66,7 +57,6 @@ class _UserProfileState extends State<UserProfile> {
                 showInitialTextAbovePicture: true,
               ),
             ),
-
             SizedBox(
               height: 30.0,
             ),
@@ -80,7 +70,7 @@ class _UserProfileState extends State<UserProfile> {
                   labelStyle: TextStyle(
                     fontFamily: 'Raleway',
                     color: Colors.black,
-                    fontSize: 20.0,
+                    fontSize: 16.0,
                   ),
                   border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(7.0))),
@@ -104,7 +94,7 @@ class _UserProfileState extends State<UserProfile> {
                     labelStyle: TextStyle(
                       fontFamily: 'Raleway',
                       color: Colors.black,
-                      fontSize: 20.0,
+                      fontSize: 16.0,
                     ),
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(7.0))),
@@ -121,7 +111,6 @@ class _UserProfileState extends State<UserProfile> {
             SizedBox(
               height: 30.0,
             ),
-
             new Center(
               child: MaterialButton(
                 height: 45.0,
