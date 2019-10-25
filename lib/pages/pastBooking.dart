@@ -1,52 +1,310 @@
 import 'package:flutter/material.dart';
 
-class PastBookingPage extends StatelessWidget {
+class PastBookingPage extends StatefulWidget {
+  _PastBookingPageState createState() => new _PastBookingPageState();
+}
+
+class _PastBookingPageState extends State<PastBookingPage> {
+  List<bool> _isvisiblecontent;
+  @override
+  void initState() {
+    super.initState();
+    _isvisiblecontent = [false, false];
+  }
+
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    return Card(
+    return Container(
+      padding: EdgeInsets.fromLTRB(10.0, 20.0, 20.0, 10.0),
       child: ListView(
         children: <Widget>[
-          const ListTile(
-            title: Text("Abay Bus"),
+          new Card(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(15.0),
+            ),
+            elevation: 10.0,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: <Widget>[
+                new Container(
+                  height: 150.0,
+                  child: Image.asset(
+                    'assets/images/Guzo.png',
+                    fit: BoxFit.fitWidth,
+                  ),
+                ),
+                new Row(
+                  children: <Widget>[
+                    new Expanded(
+                      child: ListTile(
+                        title: Text(
+                          "Selam Bus",
+                          style: TextStyle(fontSize: 20.0),
+                        ),
+                        subtitle: Text("Selam bus form addis ababa to asmera"),
+                      ),
+                      flex: 7,
+                    ),
+                    new Expanded(
+                      child: IconButton(
+                        icon: Icon(Icons.keyboard_arrow_down),
+                        onPressed: () {
+                          setState(() {
+                            _isvisiblecontent[0] = !_isvisiblecontent[0];
+                          });
+                        },
+                      ),
+                    ),
+                  ],
+                ),
+                _isvisiblecontent[0]
+                    ? Container(
+                        padding: EdgeInsets.fromLTRB(10.0, 0.0, 10.0, 10.0),
+                        child: Column(
+                          children: <Widget>[
+                            Divider(
+                                height: 20.0,
+                                color: Theme.of(context).primaryColor),
+                            SizedBox(height: 10.0),
+                            Row(
+                              children: <Widget>[
+                                Expanded(
+                                  child: Text(
+                                    "From:  ",
+                                    style:
+                                        TextStyle(fontWeight: FontWeight.bold),
+                                  ),
+                                ),
+                                Expanded(
+                                  child: Text("Addis Ababa"),
+                                )
+                              ],
+                            ),
+                            SizedBox(height: 10.0),
+                            Row(
+                              children: <Widget>[
+                                Expanded(
+                                  child: new Text(
+                                    "To  ",
+                                    style:
+                                        TextStyle(fontWeight: FontWeight.bold),
+                                  ),
+                                ),
+                                Expanded(
+                                  child: new Text("Asmera"),
+                                )
+                              ],
+                            ),
+                            SizedBox(height: 10.0),
+                            Row(
+                              children: <Widget>[
+                                Expanded(
+                                  child: new Text(
+                                    "Departure Date: ",
+                                    style:
+                                        TextStyle(fontWeight: FontWeight.bold),
+                                  ),
+                                ),
+                                Expanded(
+                                  child: new Text("tusday,nov 2017"),
+                                )
+                              ],
+                            ),
+                            SizedBox(height: 10.0),
+                            Row(
+                              children: <Widget>[
+                                Expanded(
+                                  child: new Text(
+                                    "Depatrture Time:  ",
+                                    style:
+                                        TextStyle(fontWeight: FontWeight.bold),
+                                  ),
+                                ),
+                                Expanded(
+                                  child: new Text("Mornnig"),
+                                )
+                              ],
+                            ),
+                            SizedBox(height: 10.0),
+                            Row(
+                              children: <Widget>[
+                                Expanded(
+                                  child: new Text("Fee:  ",
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.bold)),
+                                ),
+                                Expanded(
+                                  child: new Text("1000.00"),
+                                )
+                              ],
+                            ),
+                            SizedBox(height: 10.0),
+                            Row(
+                              children: <Widget>[
+                                Expanded(
+                                  child: new Text(
+                                    "Status",
+                                    style:
+                                        TextStyle(fontWeight: FontWeight.bold),
+                                  ),
+                                ),
+                                Expanded(
+                                  child: new Text("payed"),
+                                )
+                              ],
+                            ),
+                          ],
+                        ),
+                      )
+                    : SizedBox(
+                        height: 10.0,
+                      )
+              ],
+            ),
           ),
-          SizedBox(height: 10.0),
-          Row(
-            children: <Widget>[new Text("ID:  "), new Text("ABAY1345YRR55")],
-          ),
-          SizedBox(height: 10.0),
-          Row(
-            children: <Widget>[new Text("From:  "), new Text("Addis Ababa")],
-          ),
-          SizedBox(height: 10.0),
-          Row(
-            children: <Widget>[new Text("TO:  "), new Text("Bahrdar")],
-          ),
-          SizedBox(height: 10.0),
-          Row(
-            children: <Widget>[
-              new Text("Start Date:  "),
-              new Text("Tommorow 5:30 AM")
-            ],
-          ),
-          SizedBox(height: 10.0),
-          Row(
-            children: <Widget>[
-              new Text("Arrival Time:  "),
-              new Text("Tommorow 12:00 PM")
-            ],
-          ),
-          SizedBox(height: 10.0),
-          Row(
-            children: <Widget>[new Text("Fee:"), new Text("ETB:450")],
-          ),
-          SizedBox(height: 10.0),
-          Center(
-            child: FlatButton(
-              child: Text("Report"),
-              onPressed: () {
-                // Render Reporting Page.
-              },
+          new Card(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(15.0),
+            ),
+            elevation: 10.0,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: <Widget>[
+                new Container(
+                  height: 150.0,
+                  child: Image.asset(
+                    'assets/images/Guzo.png',
+                    fit: BoxFit.fitWidth,
+                  ),
+                ),
+                new Row(
+                  children: <Widget>[
+                    new Expanded(
+                      child: ListTile(
+                        title: Text(
+                          "Selam Bus",
+                          style: TextStyle(fontSize: 20.0),
+                        ),
+                        subtitle: Text("Selam bus form addis ababa to asmera"),
+                      ),
+                      flex: 7,
+                    ),
+                    new Expanded(
+                      child: IconButton(
+                        icon: Icon(Icons.keyboard_arrow_down),
+                        onPressed: () {
+                          setState(() {
+                            _isvisiblecontent[1] = !_isvisiblecontent[1];
+                          });
+                        },
+                      ),
+                    ),
+                  ],
+                ),
+                _isvisiblecontent[1]
+                    ? Container(
+                        padding: EdgeInsets.fromLTRB(10.0, 0.0, 10.0, 10.0),
+                        child: Column(
+                          children: <Widget>[
+                            Divider(
+                                height: 20.0,
+                                color: Theme.of(context).primaryColor),
+                            SizedBox(height: 10.0),
+                            Row(
+                              children: <Widget>[
+                                Expanded(
+                                  child: Text(
+                                    "From:  ",
+                                    style:
+                                        TextStyle(fontWeight: FontWeight.bold),
+                                  ),
+                                ),
+                                Expanded(
+                                  child: Text("Addis Ababa"),
+                                )
+                              ],
+                            ),
+                            SizedBox(height: 10.0),
+                            Row(
+                              children: <Widget>[
+                                Expanded(
+                                  child: new Text(
+                                    "To  ",
+                                    style:
+                                        TextStyle(fontWeight: FontWeight.bold),
+                                  ),
+                                ),
+                                Expanded(
+                                  child: new Text("Asmera"),
+                                )
+                              ],
+                            ),
+                            SizedBox(height: 10.0),
+                            Row(
+                              children: <Widget>[
+                                Expanded(
+                                  child: new Text(
+                                    "Departure Date: ",
+                                    style:
+                                        TextStyle(fontWeight: FontWeight.bold),
+                                  ),
+                                ),
+                                Expanded(
+                                  child: new Text("tusday,nov 2017"),
+                                )
+                              ],
+                            ),
+                            SizedBox(height: 10.0),
+                            Row(
+                              children: <Widget>[
+                                Expanded(
+                                  child: new Text(
+                                    "Depatrture Time:  ",
+                                    style:
+                                        TextStyle(fontWeight: FontWeight.bold),
+                                  ),
+                                ),
+                                Expanded(
+                                  child: new Text("Mornnig"),
+                                )
+                              ],
+                            ),
+                            SizedBox(height: 10.0),
+                            Row(
+                              children: <Widget>[
+                                Expanded(
+                                  child: new Text("Fee:  ",
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.bold)),
+                                ),
+                                Expanded(
+                                  child: new Text("1000.00"),
+                                )
+                              ],
+                            ),
+                            SizedBox(height: 10.0),
+                            Row(
+                              children: <Widget>[
+                                Expanded(
+                                  child: new Text(
+                                    "Status",
+                                    style:
+                                        TextStyle(fontWeight: FontWeight.bold),
+                                  ),
+                                ),
+                                Expanded(
+                                  child: new Text("payed"),
+                                )
+                              ],
+                            ),
+                          ],
+                        ),
+                      )
+                    : SizedBox(
+                        height: 10.0,
+                      )
+              ],
             ),
           )
         ],

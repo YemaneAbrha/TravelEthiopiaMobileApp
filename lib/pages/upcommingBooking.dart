@@ -26,19 +26,19 @@ class _UpcommingBookingPageState extends State<UpcommingBookingPage> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: <Widget>[
-                new Container(
-                  height: 150.0,
-                  child: Image.asset(
-                    'assets/images/Guzo.png',
-                    fit: BoxFit.fitWidth,
-                  ),
-                ),
+                // new Container(
+                //   height: 150.0,
+                //   child: Image.asset(
+                //     'assets/images/Guzo.png',
+                //     fit: BoxFit.fitWidth,
+                //   ),
+                // ),
                 new Row(
                   children: <Widget>[
                     new Expanded(
                       child: ListTile(
                         title: Text(
-                          "Selam Bus",
+                          "From ODA-BULTUM to ADDIS ABABA",
                           style: TextStyle(fontSize: 20.0),
                         ),
                         subtitle: Text("Selam bus form addis ababa to asmera"),
@@ -158,7 +158,17 @@ class _UpcommingBookingPageState extends State<UpcommingBookingPage> {
                       )
                     : SizedBox(
                         height: 10.0,
-                      )
+                      ),
+                ButtonTheme.bar(
+                  child: ButtonBar(
+                    children: <Widget>[
+                      FlatButton(
+                        child: const Text("Cancle"),
+                        onPressed: () {},
+                      ),
+                    ],
+                  ),
+                ),
               ],
             ),
           ),
@@ -170,19 +180,19 @@ class _UpcommingBookingPageState extends State<UpcommingBookingPage> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: <Widget>[
-                new Container(
-                  height: 150.0,
-                  child: Image.asset(
-                    'assets/images/Guzo.png',
-                    fit: BoxFit.fitWidth,
-                  ),
-                ),
+                // new Container(
+                //   height: 150.0,
+                //   child: Image.asset(
+                //     'assets/images/Guzo.png',
+                //     fit: BoxFit.fitWidth,
+                //   ),
+                // ),
                 new Row(
                   children: <Widget>[
                     new Expanded(
                       child: ListTile(
                         title: Text(
-                          "Selam Bus",
+                          "From Addis Ababa   To Debre Markos",
                           style: TextStyle(fontSize: 20.0),
                         ),
                         subtitle: Text("Selam bus form addis ababa to asmera"),
@@ -302,7 +312,17 @@ class _UpcommingBookingPageState extends State<UpcommingBookingPage> {
                       )
                     : SizedBox(
                         height: 10.0,
-                      )
+                      ),
+                ButtonTheme.bar(
+                  child: ButtonBar(
+                    children: <Widget>[
+                      FlatButton(
+                        child: const Text("Cancle"),
+                        onPressed: () {},
+                      ),
+                    ],
+                  ),
+                ),
               ],
             ),
           )

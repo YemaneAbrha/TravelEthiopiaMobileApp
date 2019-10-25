@@ -100,8 +100,8 @@ class _BookState extends State<Book> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: BasicAppBar.getAppBar(context),
-      //backgroundColor: Color.fromRGBO(230, 230, 230, 1.0),
-      backgroundColor: Colors.white,
+      // backgroundColor: Color.fromRGBO(230, 230, 230, 1.0),
+      // backgroundColor: Colors.white,
       body: Container(
           color: Colors.white,
           constraints: BoxConstraints.expand(),
@@ -115,43 +115,43 @@ class _BookState extends State<Book> {
                 new Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
-                    new Flexible(
-                      child: new DropDownField(
-                          value: _destination_city,
-                          required: true,
-                          itemsVisibleInDropdown: 1,
-                          strict: false,
-                          labelText: 'From *',
-                          labelStyle: TextStyle(
+                    new Expanded(
+                      child: DropdownButton(
+                        hint: new Text(
+                          "From *",
+                          style: TextStyle(
                             fontFamily: 'Raleway',
                             color: Colors.black,
-                            fontSize: 14.0,
+                            fontSize: 16.0,
                           ),
-                          items: _cities,
-                          setter: (dynamic value) {
-                            setState(() {
-                              _departure_city = value;
-                            });
-                          }),
+                        ),
+                        value: _departure_city,
+                        items: _citiesdropDownMenuItem,
+                        onChanged: (String value) {
+                          setState(() {
+                            _destination_city = value;
+                          });
+                        },
+                      ),
                     ),
                     new Flexible(
-                      child: new DropDownField(
-                          value: _destination_city,
-                          required: true,
-                          strict: false,
-                          itemsVisibleInDropdown: 1,
-                          labelText: 'TO',
-                          labelStyle: TextStyle(
+                      child: new DropdownButton(
+                        hint: new Text(
+                          "To *",
+                          style: TextStyle(
                             fontFamily: 'Raleway',
                             color: Colors.black,
-                            fontSize: 14.0,
+                            fontSize: 16.0,
                           ),
-                          items: _cities,
-                          setter: (dynamic value) {
-                            setState(() {
-                              _destination_city = value;
-                            });
-                          }),
+                        ),
+                        value: _destination_city,
+                        items: _citiesdropDownMenuItem,
+                        onChanged: (String value) {
+                          setState(() {
+                            _destination_city = value;
+                          });
+                        },
+                      ),
                     ),
                   ],
                 ),
