@@ -18,7 +18,7 @@ Future requesBookAPI(BuildContext context, Map<String, dynamic> body) async {
   if (response.statusCode == 200) {
     showDialogSingleButton(
         context, "success", "Your Booking was success-fully", "OK");
-    myBooking(context);
+    // myBooking(context);
   } else {
     showDialogSingleButton(
         context, "Unabel to Book", "Correct the form data", "OK");
@@ -26,10 +26,10 @@ Future requesBookAPI(BuildContext context, Map<String, dynamic> body) async {
   }
 }
 
-Future myBooking(BuildContext context) async {
+Future upcommingBookingRequestAPI(BuildContext context) async {
   //use user id to my book
-  final url = 'http/mybooking';
   var Token;
+  final url = 'http/mybooking';
   await getToken().then((result) {
     Token = result;
   });
@@ -40,15 +40,16 @@ Future myBooking(BuildContext context) async {
   if (response.statusCode == 200) {
     final responseJson = jsonDecode(response.body);
 
-    Map<String, dynamic> myBooking = {
-      'busName': responseJson['bus_name'],
-      'bookId': responseJson['id'],
-      'from': responseJson['from'],
-      'to': responseJson['to'],
-      'departureTime': responseJson['departureTime'],
-      'price': responseJson['price'],
-      'status': responseJson['status']
-    };
+    // Map<String, dynamic> myBooking = {
+    //   'busName': responseJson['bus_name'],
+    //   'bookId': responseJson['id'],
+    //   'from': responseJson['from'],
+    //   'to': responseJson['to'],
+    //   'departureTime': responseJson['departureTime'],
+    //   'price': responseJson['price'],
+    //   'status': responseJson['status']
+    // };
+    return responseJson;
     //   Navigator.pushReplacement(
     //       context,
     //       new MaterialPageRoute(
@@ -56,4 +57,30 @@ Future myBooking(BuildContext context) async {
   }
 }
 
-Future deleteBooking(BuildContext context, Map<String, dynamic> body) {}
+Future pastBoookingRequestAPI(BuildContext context) async {
+  var Token;
+  final url = 'http/pastbooking';
+  await getToken().then((result) {
+    Token = result;
+  });
+  http.Response response = await http
+      .get(url, headers: {HttpHeaders.authorizationHeader: "Token:$Token"});
+  if (response.statusCode == 200) {
+    final responseJson = jsonDecode(response.body);
+    return responseJson;
+  }
+}
+
+Future deleteBooking(BuildContext context, Map<String, dynamic> body) async {
+  var Token;
+  final url = 'http/pastbooking';
+  await getToken().then((result) {
+    Token = result;
+  });
+  http.Response response = await http
+      .get(url, headers: {HttpHeaders.authorizationHeader: "Token:$Token"});
+  if (response.statusCode == 200) {
+    final responseJson = jsonDecode(response.body);
+    return responseJson;
+  }
+}
