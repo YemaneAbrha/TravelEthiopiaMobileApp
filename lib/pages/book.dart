@@ -100,15 +100,10 @@ class _BookState extends State<Book> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: BasicAppBar.getAppBar(context),
-      // backgroundColor: Color.fromRGBO(230, 230, 230, 1.0),
-      // backgroundColor: Colors.white,
       body: Container(
           color: Colors.white,
           constraints: BoxConstraints.expand(),
-          //  child: Form(
-          //key: _formKey,
-          // autovalidate: false,
-          padding: EdgeInsets.fromLTRB(30.0, 50.0, 30.0, 32.0),
+          padding: EdgeInsets.fromLTRB(30.0, 70.0, 30.0, 32.0),
           child: SingleChildScrollView(
             child: Column(
               children: <Widget>[
@@ -129,7 +124,7 @@ class _BookState extends State<Book> {
                         items: _citiesdropDownMenuItem,
                         onChanged: (String value) {
                           setState(() {
-                            _destination_city = value;
+                            _departure_city = value;
                           });
                         },
                       ),
@@ -155,7 +150,6 @@ class _BookState extends State<Book> {
                     ),
                   ],
                 ),
-                // Divider(height: 20.0, color: Theme.of(context).primaryColor),
                 SizedBox(
                   height: 20.0,
                 ),
@@ -163,7 +157,6 @@ class _BookState extends State<Book> {
                   inputType: InputType.date,
                   format: dateFormat,
                   editable: false,
-                  //enabled: false,
                   decoration: InputDecoration(
                       icon: Icon(Icons.departure_board),
                       labelText: 'Departure Date *',
