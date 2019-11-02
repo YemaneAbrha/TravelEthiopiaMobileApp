@@ -39,8 +39,12 @@ class _HelpPageState extends State<HelpPage> {
                     ButtonTheme.bar(
                       child: ButtonBar(
                         children: <Widget>[
-                          FlatButton(
-                            child: const Text("MORE "),
+                          MaterialButton(
+                            color: Color.fromRGBO(0, 136, 204, 0.8),
+                            child: Text(
+                              "MORE ",
+                              style: new TextStyle(color: Colors.white),
+                            ),
                             onPressed: () {
                               showDialogSingleButton(
                                   context,
@@ -48,6 +52,7 @@ class _HelpPageState extends State<HelpPage> {
                                   "We use cookies to personalise content and ads First Do this then this then this then this then this this this okay First Do this then this then this then this then this this this okay",
                                   "ok");
                             },
+                            shape: StadiumBorder(),
                           ),
                         ],
                       ),
@@ -69,9 +74,14 @@ class _HelpPageState extends State<HelpPage> {
                     ButtonTheme.bar(
                       child: ButtonBar(
                         children: <Widget>[
-                          FlatButton(
-                            child: const Text("MORE "),
+                          MaterialButton(
+                            child: Text(
+                              "MORE ",
+                              style: new TextStyle(color: Colors.white),
+                            ),
+                            color: Color.fromRGBO(0, 136, 204, 0.8),
                             onPressed: () {},
+                            shape: StadiumBorder(),
                           ),
                         ],
                       ),
@@ -94,9 +104,14 @@ class _HelpPageState extends State<HelpPage> {
                     ButtonTheme.bar(
                       child: ButtonBar(
                         children: <Widget>[
-                          FlatButton(
-                            child: const Text("MORE "),
+                          MaterialButton(
+                            child: Text(
+                              "MORE ",
+                              style: new TextStyle(color: Colors.white),
+                            ),
+                            color: Color.fromRGBO(0, 136, 204, 0.8),
                             onPressed: () {},
+                            shape: StadiumBorder(),
                           ),
                         ],
                       ),
@@ -116,9 +131,14 @@ class _HelpPageState extends State<HelpPage> {
                     ButtonTheme.bar(
                       child: ButtonBar(
                         children: <Widget>[
-                          FlatButton(
-                            child: const Text("MORE "),
+                          MaterialButton(
+                            child: Text(
+                              "MORE ",
+                              style: new TextStyle(color: Colors.white),
+                            ),
+                            color: Color.fromRGBO(0, 136, 204, 0.8),
                             onPressed: () {},
+                            shape: StadiumBorder(),
                           ),
                         ],
                       ),

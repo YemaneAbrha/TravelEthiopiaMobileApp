@@ -15,14 +15,14 @@ class _UpcommingBookingPageState extends State<UpcommingBookingPage> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.fromLTRB(10.0, 20.0, 20.0, 10.0),
+      padding: EdgeInsets.fromLTRB(5.0, 20.0, 5.0, 10.0),
       child: ListView(
         children: <Widget>[
           new Card(
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(15.0),
             ),
-            elevation: 10.0,
+            elevation: 5.0,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: <Widget>[
@@ -162,8 +162,13 @@ class _UpcommingBookingPageState extends State<UpcommingBookingPage> {
                 ButtonTheme.bar(
                   child: ButtonBar(
                     children: <Widget>[
-                      FlatButton(
-                        child: const Text("Cancle"),
+                      MaterialButton(
+                        color: Color.fromRGBO(0, 136, 204, 0.8),
+                        child: Text(
+                          "Delete",
+                          style: new TextStyle(color: Colors.white),
+                        ),
+                        shape: StadiumBorder(),
                         onPressed: () {},
                       ),
                     ],
@@ -316,8 +321,13 @@ class _UpcommingBookingPageState extends State<UpcommingBookingPage> {
                 ButtonTheme.bar(
                   child: ButtonBar(
                     children: <Widget>[
-                      FlatButton(
-                        child: const Text("Cancle"),
+                      MaterialButton(
+                        color: Color.fromRGBO(0, 136, 204, 0.8),
+                        child: Text(
+                          "Delete",
+                          style: new TextStyle(color: Colors.white),
+                        ),
+                        shape: StadiumBorder(),
                         onPressed: () {},
                       ),
                     ],

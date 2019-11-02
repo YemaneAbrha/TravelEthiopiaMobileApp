@@ -81,36 +81,113 @@ class _HomeScreenState extends State<HomeScreen> {
 
   Widget _buildBusItem(BuildContext context, int index) {
     return Card(
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5.0)),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
-          new ListTile(
-            leading: Icon(Icons.directions_bus),
-            title: Text("\t\t" + widget.buses[index]["bus_title"]),
-            subtitle: Text("From:" +
-                widget.buses[index]["From"] +
-                "\n" +
-                "To: " +
-                widget.buses[index]["To"] +
-                "\n" +
-                "Departure Date :  " +
-                widget.buses[index]["departure_date"] +
-                "\n" +
-                "Departure Time: " +
-                widget.buses[index]["departure_time"] +
-                "\n" +
-                "Price: ETB  " +
-                widget.buses[index]["price"]),
+          new Row(
+            children: <Widget>[
+              new Expanded(
+                child: ListTile(
+                  title: Text(
+                    widget.buses[index]["bus_title"],
+                    style: new TextStyle(fontSize: 20.0),
+                  ),
+                  subtitle: Text("RAting ***********"),
+                ),
+                flex: 7,
+              )
+            ],
+          ),
+          SizedBox(height: 10.0),
+          Container(
+            padding: EdgeInsets.fromLTRB(10.0, 0.0, 10.0, 10.0),
+            child: Column(
+              children: <Widget>[
+                Divider(height: 20.0, color: Theme.of(context).primaryColor),
+                Row(
+                  children: <Widget>[
+                    Expanded(
+                      child: Text(
+                        "From:  ",
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
+                    ),
+                    Expanded(
+                      child: Text(widget.buses[index]["From"]),
+                    )
+                  ],
+                ),
+                SizedBox(height: 10.0),
+                Row(
+                  children: <Widget>[
+                    Expanded(
+                      child: Text(
+                        "TO:  ",
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
+                    ),
+                    Expanded(
+                      child: Text(widget.buses[index]["To"]),
+                    )
+                  ],
+                ),
+                SizedBox(height: 10.0),
+                Row(
+                  children: <Widget>[
+                    Expanded(
+                      child: new Text(
+                        "Departure Date :  ",
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
+                    ),
+                    Expanded(
+                      child: new Text(widget.buses[index]["departure_date"]),
+                    )
+                  ],
+                ),
+                SizedBox(height: 10.0),
+                Row(
+                  children: <Widget>[
+                    Expanded(
+                      child: new Text(
+                        "Departure Time :  ",
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
+                    ),
+                    Expanded(
+                      child: new Text(widget.buses[index]["departure_time"]),
+                    )
+                  ],
+                ),
+                SizedBox(height: 10.0),
+                Row(
+                  children: <Widget>[
+                    Expanded(
+                      child: new Text(
+                        "Price ETB :  ",
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
+                    ),
+                    Expanded(
+                      child: new Text(widget.buses[index]["price"]),
+                    )
+                  ],
+                ),
+              ],
+            ),
           ),
           ButtonTheme.bar(
             child: ButtonBar(
               children: <Widget>[
-                FlatButton(
-                  child: const Text("BUY TICKET"),
-                  onPressed: () {},
-                ),
-                FlatButton(
-                  child: const Text("MORE"),
+                MaterialButton(
+                  color: Color.fromRGBO(0, 136, 204, 0.8),
+                  child: Text(
+                    "BUY TICKET",
+                    style: new TextStyle(color: Colors.white),
+                  ),
+                  shape: StadiumBorder(),
                   onPressed: () {},
                 ),
               ],
@@ -147,159 +224,12 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       appBar: BasicAppBar.getAppBar(context),
       backgroundColor: Color.fromRGBO(230, 230, 230, 1.0),
+      //backgroundColor: Colors.white,
       body: Container(
-        margin: EdgeInsets.fromLTRB(32.0, 0.0, 32.0, 0.0),
+        margin: EdgeInsets.fromLTRB(5.0, 0.0, 5.0, 0.0),
         child: _buildBusList(),
       ),
       bottomNavigationBar: Buttom(2),
     );
-    //       child: ListView(
-    //         children: <Widget>[
-    //           Card(
-    //             child: Column(
-    //               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-    //               children: <Widget>[
-    //                 const ListTile(
-    //                   leading: Icon(Icons.directions_bus),
-    //                   title: Text("Selam Bus"),
-    //                   subtitle: Text(
-    //                       "From: Addis Ababa to Mekelle for tommorow morning Price: ETB 550"),
-    //                 ),
-    //                 ButtonTheme.bar(
-    //                   child: ButtonBar(
-    //                     children: <Widget>[
-    //                       FlatButton(
-    //                         child: const Text("BUY TICKET"),
-    //                         onPressed: () {},
-    //                       ),
-    //                       FlatButton(
-    //                         child: const Text("MORE "),
-    //                         onPressed: () {},
-    //                       ),
-    //                     ],
-    //                   ),
-    //                 ),
-    //               ],
-    //             ),
-    //           ),
-    //           // second Card
-    //           Card(
-    //             child: Column(
-    //               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-    //               children: <Widget>[
-    //                 const ListTile(
-    //                   leading: Icon(Icons.directions_bus),
-    //                   title: Text("Geda Bus"),
-    //                   subtitle: Text(
-    //                       "From: Addis Ababa to Assosa for tommorow morning Price: ETB 550"),
-    //                 ),
-    //                 ButtonTheme.bar(
-    //                   child: ButtonBar(
-    //                     children: <Widget>[
-    //                       FlatButton(
-    //                         child: const Text("BUY TICKET"),
-    //                         onPressed: () {},
-    //                       ),
-    //                       FlatButton(
-    //                         child: const Text("MORE "),
-    //                         onPressed: () {},
-    //                       ),
-    //                     ],
-    //                   ),
-    //                 ),
-    //               ],
-    //             ),
-    //           ),
-
-    //           //third Card
-    //           Card(
-    //             child: Column(
-    //               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-    //               children: <Widget>[
-    //                 const ListTile(
-    //                   leading: Icon(Icons.directions_bus),
-    //                   title: Text("Abay Bus"),
-    //                   subtitle: Text(
-    //                       "From: Addis Ababa to BAhrdar for tommorow morning Price: ETB 550"),
-    //                 ),
-    //                 ButtonTheme.bar(
-    //                   child: ButtonBar(
-    //                     children: <Widget>[
-    //                       FlatButton(
-    //                         child: const Text("BUY TICKET"),
-    //                         onPressed: () {},
-    //                       ),
-    //                       FlatButton(
-    //                         child: const Text("MORE "),
-    //                         onPressed: () {},
-    //                       ),
-    //                     ],
-    //                   ),
-    //                 ),
-    //               ],
-    //             ),
-    //           ),
-    //           //fourth card
-    //           Card(
-    //             child: Column(
-    //               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-    //               children: <Widget>[
-    //                 const ListTile(
-    //                   leading: Icon(Icons.directions_bus),
-    //                   title: Text("Lemalimo Bus"),
-    //                   subtitle: Text(
-    //                       "From: Addis Ababa to Gonder for tommorow morning Price: ETB 600"),
-    //                 ),
-    //                 ButtonTheme.bar(
-    //                   child: ButtonBar(
-    //                     children: <Widget>[
-    //                       FlatButton(
-    //                         child: const Text("BUY TICKET"),
-    //                         onPressed: () {},
-    //                       ),
-    //                       FlatButton(
-    //                         child: const Text("MORE "),
-    //                         onPressed: () {},
-    //                       ),
-    //                     ],
-    //                   ),
-    //                 ),
-    //               ],
-    //             ),
-    //           ),
-    //           //fivth Card
-    //           Card(
-    //             child: Column(
-    //               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-    //               children: <Widget>[
-    //                 const ListTile(
-    //                   leading: Icon(Icons.directions_bus),
-    //                   title: Text("Zemen Bus"),
-    //                   subtitle: Text(
-    //                       "From: Addis Ababa to Drie-Dawa for tommorow morning Price: ETB 600"),
-    //                 ),
-    //                 ButtonTheme.bar(
-    //                   child: ButtonBar(
-    //                     children: <Widget>[
-    //                       FlatButton(
-    //                         child: const Text("BUY TICKET"),
-    //                         onPressed: () {},
-    //                       ),
-    //                       FlatButton(
-    //                         child: const Text("MORE "),
-    //                         onPressed: () {},
-    //                       ),
-    //                     ],
-    //                   ),
-    //                 ),
-    //               ],
-    //             ),
-    //           ),
-    //         ],
-    //       ),
-    //     ),
-    //   ),
-    //   bottomNavigationBar: Buttom(2),
-    //);
   }
 }
