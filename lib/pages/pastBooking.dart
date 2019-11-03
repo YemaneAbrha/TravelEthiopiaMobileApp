@@ -9,7 +9,7 @@ class _PastBookingPageState extends State<PastBookingPage> {
   @override
   void initState() {
     super.initState();
-    _isvisiblecontent = [false, false];
+    _isvisiblecontent = [false, false, false, false];
   }
 
   @override
@@ -27,22 +27,16 @@ class _PastBookingPageState extends State<PastBookingPage> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: <Widget>[
-                // new Container(
-                //   height: 150.0,
-                //   child: Image.asset(
-                //     'assets/images/Guzo.png',
-                //     fit: BoxFit.fitWidth,
-                //   ),
-                // ),
                 new Row(
                   children: <Widget>[
                     new Expanded(
                       child: ListTile(
                         title: Text(
-                          "Selam Bus",
+                          "Golden Bus",
                           style: TextStyle(fontSize: 20.0),
                         ),
-                        subtitle: Text("Selam bus form addis ababa to asmera"),
+                        subtitle:
+                            Text("Golden bus form Addis Ababa to Mekelle"),
                       ),
                       flex: 7,
                     ),
@@ -171,22 +165,16 @@ class _PastBookingPageState extends State<PastBookingPage> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: <Widget>[
-                // new Container(
-                //   height: 150.0,
-                //   child: Image.asset(
-                //     'assets/images/Guzo.png',
-                //     fit: BoxFit.fitWidth,
-                //   ),
-                // ),
                 new Row(
                   children: <Widget>[
                     new Expanded(
                       child: ListTile(
                         title: Text(
-                          "Selam Bus",
+                          "Lemalio Bus",
                           style: TextStyle(fontSize: 20.0),
                         ),
-                        subtitle: Text("Selam bus form addis ababa to asmera"),
+                        subtitle:
+                            Text("Lemalimo  bus form addis ababa to Gonder"),
                       ),
                       flex: 7,
                     ),
@@ -315,22 +303,16 @@ class _PastBookingPageState extends State<PastBookingPage> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: <Widget>[
-                // new Container(
-                //   height: 150.0,
-                //   child: Image.asset(
-                //     'assets/images/Guzo.png',
-                //     fit: BoxFit.fitWidth,
-                //   ),
-                // ),
                 new Row(
                   children: <Widget>[
                     new Expanded(
                       child: ListTile(
                         title: Text(
-                          "Selam Bus",
+                          "Geda  Bus",
                           style: TextStyle(fontSize: 20.0),
                         ),
-                        subtitle: Text("Selam bus form addis ababa to asmera"),
+                        subtitle:
+                            Text("Geda bus form Dri-Dawa ababa to Addis Ababa"),
                       ),
                       flex: 7,
                     ),
@@ -339,14 +321,14 @@ class _PastBookingPageState extends State<PastBookingPage> {
                         icon: Icon(Icons.keyboard_arrow_down),
                         onPressed: () {
                           setState(() {
-                            _isvisiblecontent[0] = !_isvisiblecontent[0];
+                            _isvisiblecontent[2] = !_isvisiblecontent[2];
                           });
                         },
                       ),
                     ),
                   ],
                 ),
-                _isvisiblecontent[0]
+                _isvisiblecontent[2]
                     ? Container(
                         padding: EdgeInsets.fromLTRB(10.0, 0.0, 10.0, 10.0),
                         child: Column(
@@ -459,22 +441,16 @@ class _PastBookingPageState extends State<PastBookingPage> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: <Widget>[
-                // new Container(
-                //   height: 150.0,
-                //   child: Image.asset(
-                //     'assets/images/Guzo.png',
-                //     fit: BoxFit.fitWidth,
-                //   ),
-                // ),
                 new Row(
                   children: <Widget>[
                     new Expanded(
                       child: ListTile(
                         title: Text(
-                          "Selam Bus",
+                          "Abay Bus",
                           style: TextStyle(fontSize: 20.0),
                         ),
-                        subtitle: Text("Selam bus form addis ababa to asmera"),
+                        subtitle:
+                            Text("Selam bus form Shasemenie to Addis Ababa"),
                       ),
                       flex: 7,
                     ),
@@ -483,14 +459,14 @@ class _PastBookingPageState extends State<PastBookingPage> {
                         icon: Icon(Icons.keyboard_arrow_down),
                         onPressed: () {
                           setState(() {
-                            _isvisiblecontent[0] = !_isvisiblecontent[0];
+                            _isvisiblecontent[3] = !_isvisiblecontent[3];
                           });
                         },
                       ),
                     ),
                   ],
                 ),
-                _isvisiblecontent[0]
+                _isvisiblecontent[3]
                     ? Container(
                         padding: EdgeInsets.fromLTRB(10.0, 0.0, 10.0, 10.0),
                         child: Column(

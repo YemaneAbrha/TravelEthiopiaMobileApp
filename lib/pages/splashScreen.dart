@@ -13,12 +13,8 @@ class _SplashScreenPage extends State<SplashScreenPage> {
   @override
   Widget build(BuildContext context) {
     return new SplashScreen(
-      seconds: 1,
+      seconds: 10,
       navigateAfterSeconds: new RegistrationPage(context),
-      // title: new Text(
-      //   ' ጉዞ ',
-      //   style: new TextStyle(fontWeight: FontWeight.bold, fontSize: 32.0),
-      // ),
       image: new Image.asset('assets/images/Guzo.png'),
       gradientBackground: new LinearGradient(
         colors: [Colors.cyan, Colors.black54],
@@ -27,7 +23,7 @@ class _SplashScreenPage extends State<SplashScreenPage> {
       ),
       //backgroundColor: Colors.white,
       styleTextUnderTheLoader: new TextStyle(),
-      photoSize: 200.0,
+      photoSize: 100.0,
 
       onClick: () => print(""),
       loaderColor: Colors.green,
