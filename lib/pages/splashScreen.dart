@@ -13,7 +13,7 @@ class _SplashScreenPage extends State<SplashScreenPage> {
   @override
   Widget build(BuildContext context) {
     return new SplashScreen(
-      seconds: 10,
+      seconds: 0,
       navigateAfterSeconds: new RegistrationPage(context),
       image: new Image.asset('assets/images/Guzo.png'),
       gradientBackground: new LinearGradient(
