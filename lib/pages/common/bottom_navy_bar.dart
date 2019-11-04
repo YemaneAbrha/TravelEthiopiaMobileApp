@@ -16,7 +16,7 @@ class BottomNavyBar extends StatelessWidget {
       {Key key,
       this.selectedIndex = 0,
       this.showElevation = false,
-      this.iconSize = 24,
+      this.iconSize = 50,
       this.backgroundColor,
       this.animationDuration = const Duration(milliseconds: 0),
       @required this.items,
@@ -28,12 +28,12 @@ class BottomNavyBar extends StatelessWidget {
 
   Widget _buildItem(BottomNavyBarItem item, bool isSelected) {
     return AnimatedContainer(
-      width: isSelected ? 130 : 50,
+      width: isSelected ? 70 : 50,
       height: double.maxFinite,
       duration: animationDuration,
       padding: EdgeInsets.only(left: 12),
       decoration: BoxDecoration(
-        color: isSelected ? item.activeColor.withOpacity(0.2) : backgroundColor,
+        color: isSelected ? item.activeColor.withOpacity(1.0) : backgroundColor,
         borderRadius: BorderRadius.all(Radius.circular(50)),
       ),
       child: ListView(
