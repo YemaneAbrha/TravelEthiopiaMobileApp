@@ -24,10 +24,8 @@ class ButtonState extends State<Buttom> {
           Navigator.pushReplacementNamed(context, '/book');
         } else if (index == 1) {
           Navigator.pushReplacementNamed(context, '/mybooking');
-        } else if (index == 2) {
-          Navigator.pushReplacementNamed(context, '/allbus');
         } else {
-          Navigator.pushReplacementNamed(context, '/help');
+          Navigator.pushReplacementNamed(context, '/allbus');
         }
       }),
       items: [
@@ -43,10 +41,6 @@ class ButtonState extends State<Buttom> {
         BottomNavyBarItem(
             icon: Icon(Icons.subway),
             title: Text('All Bus'),
-            activeColor: Colors.blue),
-        BottomNavyBarItem(
-            icon: Icon(Icons.more),
-            title: Text('More'),
             activeColor: Colors.blue),
       ],
     );
