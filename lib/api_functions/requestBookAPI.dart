@@ -36,6 +36,7 @@ Future<List<Availiable>> allDeparture(BuildContext context) async {
     List<Availiable> departures = [];
     for (var data in datas) {
       Availiable availiable = Availiable(
+          data["id"],
           data["from"],
           data["to"],
           data["daparture_date"],
@@ -45,11 +46,12 @@ Future<List<Availiable>> allDeparture(BuildContext context) async {
           data["availiable_seat"]);
       departures.add(availiable);
     }
-    print("YemaneAbrha Suceess");
+
     return departures;
   } catch (e) {
     final jsonBuses = [
       {
+        "id": 1212121212,
         "bus_title": "Selam Bus",
         "from": "Addis Ababa",
         "to": "Asmera",
@@ -60,6 +62,7 @@ Future<List<Availiable>> allDeparture(BuildContext context) async {
         "departure_time": "Mornig"
       },
       {
+        "id": 121212121,
         "bus_title": "Selam Bus",
         "from": "Addis Ababa",
         "to": "Asmera",
@@ -70,12 +73,11 @@ Future<List<Availiable>> allDeparture(BuildContext context) async {
         "departure_time": "Mornig"
       }
     ];
-    print(jsonBuses.runtimeType);
-    // final datas;
 
     List<Availiable> departures = [];
     for (var data in jsonBuses) {
       Availiable availiable = Availiable(
+          data["id"],
           data["from"],
           data["to"],
           data["daparture_date"],
@@ -86,16 +88,14 @@ Future<List<Availiable>> allDeparture(BuildContext context) async {
       departures.add(availiable);
     }
 
-    //showDialogSingleButton(context, "Error", "Server Error", "Ok");
-
-    print(departures.length);
-    // print(departures[0].);
+    showDialogSingleButton(context, "Error", "Server Error", "Ok");
 
     return departures;
   }
 }
 
 Future requesBookAPI(BuildContext context, Map<String, dynamic> body) async {
+  print(body.runtimeType);
   final url = 'guzoethiopia.net/book';
   http.Response response = await http.post(
     url,
@@ -105,9 +105,11 @@ Future requesBookAPI(BuildContext context, Map<String, dynamic> body) async {
   if (response.statusCode == 200) {
     showDialogSingleButton(
         context, "success", "Your Booking was success-fully", "OK");
+    Navigator.pushReplacementNamed(context, "/mybooking");
   } else {
     showDialogSingleButton(
         context, "Unabel to Book", "Correct the form data", "OK");
+    Navigator.pushReplacementNamed(context, "/mybooking");
     return null;
   }
 }

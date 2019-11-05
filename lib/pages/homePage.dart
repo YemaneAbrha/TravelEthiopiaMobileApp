@@ -194,8 +194,6 @@ class _HomeScreenState extends State<HomeScreen> {
         child: FutureBuilder(
           future: allDeparture(context),
           builder: (BuildContext context, AsyncSnapshot snapshot) {
-            // print("Snap Shot Data");
-            // print(snapshot.data);
             if (snapshot.data == null) {
               return Container(
                 child: Center(
@@ -341,7 +339,13 @@ class _HomeScreenState extends State<HomeScreen> {
                                   style: new TextStyle(color: Colors.white),
                                 ),
                                 shape: StadiumBorder(),
-                                onPressed: () {},
+                                onPressed: () {
+                                  Map<String, dynamic> body = {
+                                    'id': snapshot.data[index].id,
+                                  };
+                                  print(body.runtimeType);
+                                  requesBookAPI(context, body);
+                                },
                               ),
                             ],
                           ),
