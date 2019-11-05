@@ -1,8 +1,8 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
-import 'package:travel_ethiopia/pages/common/buttombarnavigation.dart';
-import 'package:travel_ethiopia/pages/common/basicappbar.dart';
+import 'package:Guzo/pages/common/buttombarnavigation.dart';
+import 'package:Guzo/pages/common/basicappbar.dart';
 
 class HomeScreen extends StatefulWidget {
   static final jsonBuses = """[

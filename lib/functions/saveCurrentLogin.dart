@@ -1,5 +1,5 @@
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:travel_ethiopia/model/json/loginModel.dart';
+import 'package:Guzo/model/json/loginModel.dart';
 
 saveCurrentLogin(Map responseJson) async {
   SharedPreferences preferences = await SharedPreferences.getInstance();

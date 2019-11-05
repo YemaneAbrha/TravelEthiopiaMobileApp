@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 
-import 'package:travel_ethiopia/pages/registration.dart';
-import 'package:travel_ethiopia/pages/book.dart';
-import 'package:travel_ethiopia/pages/selectBusPayment.dart';
-import 'package:travel_ethiopia/pages/homePage.dart';
-import 'package:travel_ethiopia/pages/myBooking.dart';
-import 'package:travel_ethiopia/pages/help.dart';
-import 'package:travel_ethiopia/pages/privacy.dart';
-import 'package:travel_ethiopia/pages/profile.dart';
-import 'package:travel_ethiopia/pages/splashScreen.dart';
+import 'package:Guzo/pages/registration.dart';
+
+import 'package:Guzo/pages/book.dart';
+import 'package:Guzo/pages/selectBusPayment.dart';
+import 'package:Guzo/pages/homePage.dart';
+import 'package:Guzo/pages/myBooking.dart';
+import 'package:Guzo/pages/help.dart';
+import 'package:Guzo/pages/privacy.dart';
+import 'package:Guzo/pages/profile.dart';
+import 'package:Guzo/pages/splashScreen.dart';
 
 void main() => runApp(MyApp());
 

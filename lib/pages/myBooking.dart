@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:travel_ethiopia/pages/pastBooking.dart';
-import 'package:travel_ethiopia/pages/upcommingBooking.dart';
-import 'package:travel_ethiopia/pages/common/buttombarnavigation.dart';
+import 'package:Guzo/pages/pastBooking.dart';
+import 'package:Guzo/pages/upcommingBooking.dart';
+import 'package:Guzo/pages/common/buttombarnavigation.dart';
 
 class MyBookingPage extends StatefulWidget {
   // String busName;

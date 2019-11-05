@@ -4,9 +4,9 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
-import 'package:travel_ethiopia/functions/getUserInfo.dart';
-import 'package:travel_ethiopia/functions/saveLogout.dart';
-import 'package:travel_ethiopia/model/json/loginModel.dart';
+import 'package:Guzo/functions/getUserInfo.dart';
+import 'package:Guzo/functions/saveLogout.dart';
+import 'package:Guzo/model/json/loginModel.dart';
 
 Future<LoginModel> requestLogoutAPI(BuildContext context) async {
   final url = "https://www.backendurl.com/logout";

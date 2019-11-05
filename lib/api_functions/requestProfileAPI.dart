@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 import 'dart:async';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
-import 'package:travel_ethiopia/functions/getUserInfo.dart';
-import 'package:travel_ethiopia/functions/showSingleButtonDialog.dart';
+import 'package:Guzo/functions/getUserInfo.dart';
+import 'package:Guzo/functions/showSingleButtonDialog.dart';
 
 var Token;
 //show profile
