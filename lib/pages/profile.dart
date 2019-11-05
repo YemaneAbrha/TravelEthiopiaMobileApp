@@ -36,10 +36,24 @@ class _UserProfileState extends State<UserProfile> {
             SizedBox(
               height: 10.0,
             ),
-            new CircleAvatar(
-              backgroundImage: NetworkImage(
-                  'https://avatars0.githubusercontent.com/u/8264639?s=460&v=4'),
+            // new CircleAvatar(
+            //   child: Image.network(
+            //     "https://avatars0.githubusercontent.com/u/8264639?s=460&v=4",
+            //     fit: BoxFit.scaleDown,
+            //   ),
+            // ),
+            // ListTile(
+            Align(
+              alignment: Alignment.center,
+              child: CircleAvatar(
+                radius: 100.0,
+                backgroundImage: NetworkImage(
+                    "https://avatars0.githubusercontent.com/u/8264639?s=460&v=4"),
+              ),
             ),
+
+            // ),
+
             // new Container(
             //   padding: EdgeInsets.fromLTRB(30.0, 0.0, 30.0, 10.0),
             //   // child: new CircularProfileAvatar(
