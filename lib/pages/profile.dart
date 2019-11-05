@@ -36,13 +36,6 @@ class _UserProfileState extends State<UserProfile> {
             SizedBox(
               height: 10.0,
             ),
-            // new CircleAvatar(
-            //   child: Image.network(
-            //     "https://avatars0.githubusercontent.com/u/8264639?s=460&v=4",
-            //     fit: BoxFit.scaleDown,
-            //   ),
-            // ),
-            // ListTile(
             Align(
               alignment: Alignment.center,
               child: CircleAvatar(
@@ -51,29 +44,6 @@ class _UserProfileState extends State<UserProfile> {
                     "https://avatars0.githubusercontent.com/u/8264639?s=460&v=4"),
               ),
             ),
-
-            // ),
-
-            // new Container(
-            //   padding: EdgeInsets.fromLTRB(30.0, 0.0, 30.0, 10.0),
-            //   // child: new CircularProfileAvatar(
-            //   //   'https://avatars0.githubusercontent.com/u/8264639?s=460&v=4',
-            //   //   radius: 150,
-            //   //   backgroundColor: Color.fromRGBO(0, 136, 204, 0.8),
-            //   //   borderWidth: 2,
-            //   //   cacheImage: true,
-            //   //   initialsText: Text(
-            //   //     "YA",
-            //   //     style: TextStyle(fontSize: 40, color: Colors.white),
-            //   //   ),
-            //   //   borderColor: Color.fromRGBO(0, 136, 204, 0.8),
-            //   //   elevation: 10.0,
-            //   //   onTap: () {
-            //   //     print('adil');
-            //   //   },
-            //   //   showInitialTextAbovePicture: true,
-            //   // ),
-            // ),
             SizedBox(
               height: 30.0,
             ),

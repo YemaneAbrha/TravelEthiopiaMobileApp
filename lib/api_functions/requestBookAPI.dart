@@ -7,6 +7,7 @@ import 'dart:convert';
 
 import 'package:Guzo/functions/showSingleButtonDialog.dart';
 import 'package:Guzo/functions/getUserInfo.dart';
+import 'package:Guzo/model/json/availiable.dart';
 
 final Token = getToken();
 Future checkAvailiablity(
@@ -21,6 +22,76 @@ Future checkAvailiablity(
   } catch (e) {
     showDialogSingleButton(
         context, "Unable to check-Availiablity", "Server Error", "OK");
+  }
+}
+
+Future<List<Availiable>> allDeparture(BuildContext context) async {
+  try {
+    final url = 'guzoethiopia.net/book';
+    http.Response response = await http.get(url, headers: {
+      HttpHeaders.authorizationHeader: "Bearer $Token",
+      "Accept": "application/json",
+    });
+    final datas = jsonDecode(response.body);
+    List<Availiable> departures = [];
+    for (var data in datas) {
+      Availiable availiable = Availiable(
+          data["from"],
+          data["to"],
+          data["daparture_date"],
+          data["departure_time"],
+          data["bus_name"],
+          data["fee"],
+          data["availiable_seat"]);
+      departures.add(availiable);
+    }
+    print("YemaneAbrha Suceess");
+    return departures;
+  } catch (e) {
+    final jsonBuses = [
+      {
+        "bus_title": "Selam Bus",
+        "from": "Addis Ababa",
+        "to": "Asmera",
+        "fee": 1100.0,
+        "bus_name": "Selam Bus",
+        "availiable_seat": 21,
+        "daparture_date": "After Tommorow",
+        "departure_time": "Mornig"
+      },
+      {
+        "bus_title": "Selam Bus",
+        "from": "Addis Ababa",
+        "to": "Asmera",
+        "fee": 1100.0,
+        "bus_name": "Selam Bus",
+        "availiable_seat": 21,
+        "daparture_date": "After Tommorow",
+        "departure_time": "Mornig"
+      }
+    ];
+    print(jsonBuses.runtimeType);
+    // final datas;
+
+    List<Availiable> departures = [];
+    for (var data in jsonBuses) {
+      Availiable availiable = Availiable(
+          data["from"],
+          data["to"],
+          data["daparture_date"],
+          data["departure_time"],
+          data["bus_name"],
+          data["fee"],
+          data["availiable_seat"]);
+      departures.add(availiable);
+    }
+
+    //showDialogSingleButton(context, "Error", "Server Error", "Ok");
+
+    print(departures.length);
+    // print(departures[0].);
+
+    return departures;
   }
 }
 
