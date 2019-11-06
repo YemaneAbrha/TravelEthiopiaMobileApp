@@ -16,9 +16,12 @@ class _PastBookingPageState extends State<PastBookingPage> {
   Widget build(BuildContext context) {
     // TODO: implement build
     return Container(
-      padding: EdgeInsets.fromLTRB(10.0, 20.0, 20.0, 10.0),
+      // padding: EdgeInsets.fromLTRB(0.0, 20.0, 0.0, 0.0),
       child: ListView(
         children: <Widget>[
+          new SizedBox(
+            height: 20.0,
+          ),
           new Card(
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(15.0),

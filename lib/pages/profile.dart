@@ -30,7 +30,7 @@ class _UserProfileState extends State<UserProfile> {
       appBar: BasicAppBar.getAppBar(context),
       backgroundColor: Color.fromRGBO(230, 230, 230, 1.0),
       body: Container(
-        padding: EdgeInsets.fromLTRB(30.0, 50.0, 30.0, 10.0),
+        // padding: EdgeInsets.fromLTRB(30.0, 50.0, 30.0, 10.0),
         child: ListView(
           children: <Widget>[
             SizedBox(
