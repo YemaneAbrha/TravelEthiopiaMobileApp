@@ -4,24 +4,6 @@ import 'package:Guzo/pages/upcommingBooking.dart';
 import 'package:Guzo/pages/common/buttombarnavigation.dart';
 
 class MyBookingPage extends StatefulWidget {
-  // String busName;
-  // String bookId;
-  // String from;
-  // String to;
-  // String departureTime;
-  // String departureDate;
-  // double price;
-  // String status;
-  // MyBookingPage(Map<String, dynamic> myBooking) {
-  // busName = myBooking['busName'];
-  // bookId = myBooking['bookId'];
-  // from = myBooking['from'];
-  // to = myBooking['to'];
-  // departureTime = myBooking['departureTime'];
-  // departureDate = myBooking['departureDate'];
-  // price = myBooking['price'];
-  // status = myBooking['status'];
-  //}
   _MyBookingPageState createState() => _MyBookingPageState();
 }
 
@@ -41,13 +23,14 @@ class _MyBookingPageState extends State<MyBookingPage> {
             IconButton(
               icon: Icon(Icons.person),
               onPressed: () {
-                // Navigator.pushNamed(context, 'profile');
                 Navigator.pushReplacementNamed(context, '/profile');
               },
             ),
           ],
-          backgroundColor: Color.fromRGBO(0, 136, 204, 0.8),
-          iconTheme: IconThemeData(color: Colors.black),
+          // backgroundColor: Color.fromRGBO(0, 136, 204, 0.8),
+          backgroundColor: Color.fromRGBO(91, 91, 92, 1.0),
+
+          iconTheme: IconThemeData(color: Colors.white),
           bottom: TabBar(
             tabs: <Widget>[
               Tab(

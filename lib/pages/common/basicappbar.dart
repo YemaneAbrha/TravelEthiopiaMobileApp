@@ -17,9 +17,11 @@ class BasicAppBar {
           },
         ),
       ],
-      backgroundColor: Color.fromRGBO(0, 136, 204, 0.8),
-      iconTheme: IconThemeData(color: Colors.black),
-      // elevation: Theme.of(context).platform == TargetPlatform.iOS ? 0.0 : 6.0,
+      // backgroundColor: Color.fromRGBO(0, 136, 204, 0.8),
+      backgroundColor: Color.fromRGBO(91, 91, 92, 1.0),
+
+      iconTheme: IconThemeData(color: Colors.white),
+      elevation: Theme.of(context).platform == TargetPlatform.iOS ? 0.0 : 5.0,
     );
   }
 }
