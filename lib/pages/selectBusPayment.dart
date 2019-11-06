@@ -35,10 +35,15 @@ class _SelectBusPageState extends State<SelectBusPage> {
                     ),
                     title: Text(
                       "Guzo Ethiopia",
-                      style: TextStyle(fontSize: 20.0),
+                      style: TextStyle(fontSize: 25.0),
                     ),
                     subtitle: Text(
-                        "Guzo Ethiopia Mobile Platform for booking trip around the Ethiopia"),
+                      "Guzo Ethiopia Mobile Platform for booking trip around the Ethiopia \nPrice: 300.0 \t\t\t\t\t Seat Leaft: 54 ",
+                      style: TextStyle(fontSize: 16.0),
+                    ),
+                    onTap: () {
+                      print("You Tab ");
+                    },
                   ),
                   Divider(height: 20.0, color: Theme.of(context).primaryColor),
                   SizedBox(
