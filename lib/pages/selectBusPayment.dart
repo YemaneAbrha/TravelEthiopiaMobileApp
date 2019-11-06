@@ -9,27 +9,9 @@ class SelectBusPage extends StatefulWidget {
 }
 
 class _SelectBusPageState extends State<SelectBusPage> {
-  int selectedbus;
-  int selectedpayment;
-
   @override
   void initState() {
     super.initState();
-    selectedbus = 0;
-    selectedpayment = 0;
-    // _saveCurrentRoute("/HomeScreen");
-  }
-
-  setselectedpayment(int value) {
-    setState(() {
-      selectedpayment = value;
-    });
-  }
-
-  setsetselectedbus(int value) {
-    setState(() {
-      selectedbus = value;
-    });
   }
 
   @override
@@ -38,7 +20,35 @@ class _SelectBusPageState extends State<SelectBusPage> {
       appBar: BasicAppBar.getAppBar(context),
       backgroundColor: Color.fromRGBO(230, 230, 230, 1.0),
       body: Container(
-        padding: EdgeInsets.all(32.0),
+        padding: EdgeInsets.all(0.0),
+        child: ListView.builder(
+          itemCount: 10,
+          itemBuilder: (BuildContext context, int index) {
+            return Container(
+              child: Column(
+                children: <Widget>[
+                  ListTile(
+                    leading: CircleAvatar(
+                      // backgroundImage: Image.asset('assets/images/Guzo.png'),
+                      backgroundImage: AssetImage('assets/images/Guzo.png'),
+                      radius: 25,
+                    ),
+                    title: Text(
+                      "Guzo Ethiopia",
+                      style: TextStyle(fontSize: 20.0),
+                    ),
+                    subtitle: Text(
+                        "Guzo Ethiopia Mobile Platform for booking trip around the Ethiopia"),
+                  ),
+                  Divider(height: 20.0, color: Theme.of(context).primaryColor),
+                  SizedBox(
+                    height: 10.0,
+                  ),
+                ],
+              ),
+            );
+          },
+        ),
       ),
       bottomNavigationBar: Buttom(0),
     );
