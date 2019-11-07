@@ -17,28 +17,28 @@ class Book extends StatefulWidget {
 }
 
 class _BookState extends State<Book> {
-  final _formKey = GlobalKey<FormState>();
-  Map<String, dynamic> formData;
-  List<String> cities = [
-    'Bangalore',
-    'Chennai',
-    'New York',
-    'Mumbai',
-    'Delhi',
-    'Tokyo',
-  ];
-  List<String> countries = [
-    'INDIA',
-    'USA',
-    'JAPAN',
-  ];
+  // final _formKey = GlobalKey<FormState>();
+  // Map<String, dynamic> formData;
+  // List<String> cities = [
+  //   'Bangalore',
+  //   'Chennai',
+  //   'New York',
+  //   'Mumbai',
+  //   'Delhi',
+  //   'Tokyo',
+  // ];
+  // List<String> countries = [
+  //   'INDIA',
+  //   'USA',
+  //   'JAPAN',
+  // ];
 
-  _BookState() {
-    formData = {
-      'City': 'Bangalore',
-      'Country': 'INDIA',
-    };
-  }
+  // _BookState() {
+  //   formData = {
+  //     'City': 'Bangalore',
+  //     'Country': 'INDIA',
+  //   };
+  // }
 
   final dateFormat = DateFormat("EEEE, MMMM d, yyyy");
   final timeFormat = DateFormat("h:mm a");
