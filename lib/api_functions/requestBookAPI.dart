@@ -10,19 +10,26 @@ import 'package:Guzo/functions/getUserInfo.dart';
 import 'package:Guzo/model/json/availiable.dart';
 
 final Token = getToken();
-Future checkAvailiablity(
-    BuildContext context, Map<String, dynamic> body) async {
-  try {
-    final url = 'guzoethipia.net/book';
-    http.Response response = await http.get(url, headers: {
-      HttpHeaders.authorizationHeader: 'Bearer $Token',
-      "Accept": "application/json",
-      "Content-type": "application/json"
-    });
-  } catch (e) {
-    showDialogSingleButton(
-        context, "Unable to check-Availiablity", "Server Error", "OK");
-  }
+// Future checkAvailiablity(
+//     BuildContext context, Map<String, dynamic> body) async {
+//   try {
+//     final url = 'guzoethipia.net/book';
+//     http.Response response = await http.get(url, headers: {
+//       HttpHeaders.authorizationHeader: 'Bearer $Token',
+//       "Accept": "application/json",
+//       "Content-type": "application/json"
+//     });
+//   } catch (e) {
+//     showDialogSingleButton(
+//         context, "Unable to check-Availiablity", "Server Error", "OK");
+//   }
+// }
+Future checkAvailiablity() async {
+  var uri = Uri.parse("http://pub.dartlang.org/packages/create");
+  var request = new http.MultipartRequest("GET", uri);
+  request.fields['user'] = 'yemaneabrha@gmail.com';
+  var response = await request.send();
+  if (response.statusCode == 200) print("uploaded");
 }
 
 Future<List<Availiable>> allDeparture(BuildContext context) async {
@@ -36,14 +43,16 @@ Future<List<Availiable>> allDeparture(BuildContext context) async {
     List<Availiable> departures = [];
     for (var data in datas) {
       Availiable availiable = Availiable(
-          data["id"],
-          data["from"],
-          data["to"],
-          data["daparture_date"],
-          data["departure_time"],
-          data["bus_name"],
-          data["fee"],
-          data["availiable_seat"]);
+        data["id"],
+        data["from"],
+        data["to"],
+        data["daparture_date"],
+        data["departure_time"],
+        data["bus_name"],
+        data["bus_description"],
+        data["fee"],
+        data["availiable_seat"],
+      );
       departures.add(availiable);
     }
 
@@ -52,22 +61,24 @@ Future<List<Availiable>> allDeparture(BuildContext context) async {
     final jsonBuses = [
       {
         "id": 1212121212,
-        "bus_title": "Selam Bus",
         "from": "Addis Ababa",
         "to": "Asmera",
         "fee": 1100.0,
         "bus_name": "Selam Bus",
+        "bus_description":
+            "Selam bus is owned by some bullshit and It has been serving Ethiopian for around 30 years there are hostes with big ass",
         "availiable_seat": 21,
         "daparture_date": "After Tommorow",
         "departure_time": "Mornig"
       },
       {
         "id": 121212121,
-        "bus_title": "Selam Bus",
         "from": "Addis Ababa",
         "to": "Asmera",
         "fee": 1100.0,
-        "bus_name": "Selam Bus",
+        "bus_name": "Abay Bus",
+        "bus_description":
+            "Abay Bus is owned by other bullshit It has been serving Ethiopian for around 5 years and It use Modern Thechnologies for fucking ",
         "availiable_seat": 21,
         "daparture_date": "After Tommorow",
         "departure_time": "Mornig"
@@ -83,6 +94,7 @@ Future<List<Availiable>> allDeparture(BuildContext context) async {
           data["daparture_date"],
           data["departure_time"],
           data["bus_name"],
+          data["bus_description"],
           data["fee"],
           data["availiable_seat"]);
       departures.add(availiable);

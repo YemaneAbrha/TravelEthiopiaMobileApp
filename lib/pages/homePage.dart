@@ -51,6 +51,10 @@ class _HomeScreenState extends State<HomeScreen> {
                                   snapshot.data[index].bus_name,
                                   style: new TextStyle(fontSize: 20.0),
                                 ),
+                                subtitle: Text(
+                                  "\n" + snapshot.data[index].bus_description,
+                                  style: TextStyle(fontSize: 16.0),
+                                ),
                               ),
                               flex: 7,
                             ),
