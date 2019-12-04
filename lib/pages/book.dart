@@ -1,8 +1,8 @@
-import 'dart:ffi';
-
-import 'package:dropdownfield/dropdownfield.dart';
+// import 'dart:ffi';
+//
+// import 'package:dropdownfield/dropdownfield.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/material.dart' as prefix0;
+// import 'package:flutter/material.dart' as prefix0;
 import 'package:intl/intl.dart';
 import 'package:datetime_picker_formfield/datetime_picker_formfield.dart';
 import 'package:Guzo/pages/common/basicappbar.dart';
@@ -17,29 +17,6 @@ class Book extends StatefulWidget {
 }
 
 class _BookState extends State<Book> {
-  // final _formKey = GlobalKey<FormState>();
-  // Map<String, dynamic> formData;
-  // List<String> cities = [
-  //   'Bangalore',
-  //   'Chennai',
-  //   'New York',
-  //   'Mumbai',
-  //   'Delhi',
-  //   'Tokyo',
-  // ];
-  // List<String> countries = [
-  //   'INDIA',
-  //   'USA',
-  //   'JAPAN',
-  // ];
-
-  // _BookState() {
-  //   formData = {
-  //     'City': 'Bangalore',
-  //     'Country': 'INDIA',
-  //   };
-  // }
-
   final dateFormat = DateFormat("EEEE, MMMM d, yyyy");
   final timeFormat = DateFormat("h:mm a");
   DateTime date;
@@ -59,6 +36,7 @@ class _BookState extends State<Book> {
     "Semera",
     "Asmera",
     "Alamata",
+    "Keren",
     "Shire",
     "Axum",
     "Lalibela",
@@ -251,7 +229,7 @@ class _BookState extends State<Book> {
                         )),
                     shape: StadiumBorder(),
                     height: 45,
-                    color: Color.fromRGBO(0, 136, 204, 0.8),
+                    color: Color.fromRGBO(28, 112, 50, 1.0),
                     onPressed: () {
                       setState(() {
                         Navigator.pushNamed(context, '/selectBus');

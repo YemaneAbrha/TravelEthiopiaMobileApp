@@ -169,7 +169,8 @@ class _HomeScreenState extends State<HomeScreen> {
                           child: ButtonBar(
                             children: <Widget>[
                               MaterialButton(
-                                color: Color.fromRGBO(0, 136, 204, 0.8),
+                                // color: Color.fromRGBO(0, 136, 204, 0.8),
+                                color: Color.fromRGBO(28, 112, 50, 1.0),
                                 child: Text(
                                   "BUY TICKET",
                                   style: new TextStyle(color: Colors.white),
@@ -179,8 +180,10 @@ class _HomeScreenState extends State<HomeScreen> {
                                   Map<String, dynamic> body = {
                                     'id': snapshot.data[index].id,
                                   };
-                                  print(body.runtimeType);
-                                  requesBookAPI(context, body);
+                                  //  print(body.runtimeType);
+                                  //requesBookAPI(context, body);
+                                  Navigator.pushNamed(
+                                      context, '/bookingConfirmation');
                                 },
                               ),
                             ],

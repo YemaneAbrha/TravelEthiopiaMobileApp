@@ -10,11 +10,12 @@ import 'package:Guzo/model/json/loginModel.dart';
 
 Future requestSignup(BuildContext context, Map<String, dynamic> body) async {
   try {
-    final url = "GuzoEthiopia.net/user/signup";
+    final url = "https://guzo-booking.herokuapp.com/user";
     http.Response response = await http.post(url, body: body, headers: {});
     if (response.statusCode == 201) {
       final user = json.decode(response.body);
-      requestLoginAPI(context, user[0].phonenumber);
+      print("Sucess");
+      //requestLoginAPI(context, user[0].phonenumber);
     }
   } catch (err) {
     showDialogSingleButton(context, "Unable to Register", "Server Error", "OK");

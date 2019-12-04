@@ -43,6 +43,7 @@ class _SelectBusPageState extends State<SelectBusPage> {
                     ),
                     onTap: () {
                       print("You Tab ");
+                      Navigator.pushNamed(context, '/bookingConfirmation');
                     },
                   ),
                   Divider(height: 20.0, color: Theme.of(context).primaryColor),

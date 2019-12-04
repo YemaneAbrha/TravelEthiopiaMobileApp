@@ -28,7 +28,8 @@ class _MyBookingPageState extends State<MyBookingPage> {
             ),
           ],
           // backgroundColor: Color.fromRGBO(0, 136, 204, 0.8),
-          backgroundColor: Color.fromRGBO(91, 91, 92, 1.0),
+          // backgroundColor: Color.fromRGBO(91, 91, 92, 1.0),
+          backgroundColor: Color.fromRGBO(28, 112, 50, 1.0),
 
           iconTheme: IconThemeData(color: Colors.white),
           bottom: TabBar(
@@ -36,14 +37,14 @@ class _MyBookingPageState extends State<MyBookingPage> {
               Tab(
                 icon: Icon(
                   Icons.card_travel,
-                  color: Colors.black,
+                  color: Colors.white,
                 ),
                 text: 'Up Comming',
               ),
               Tab(
                 icon: Icon(
                   Icons.history,
-                  color: Colors.black,
+                  color: Colors.white,
                 ),
                 text: 'Past Booking',
               ),

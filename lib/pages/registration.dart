@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:Guzo/api_functions/requestAuthAPI.dart';
 
 class RegistrationPage extends StatefulWidget {
   RegistrationPage(BuildContext context);
@@ -6,16 +7,17 @@ class RegistrationPage extends StatefulWidget {
 }
 
 class _RegistrtionPageState extends State<RegistrationPage> {
+  String _fullName, _phoneNumber;
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Scaffold(
       appBar: new AppBar(
         title: new Text(
           "ጉዞ ፥ ኢትዮጵያ",
           style: TextStyle(color: Colors.white),
         ),
-        backgroundColor: Color.fromRGBO(91, 91, 92, 1.0),
+        backgroundColor: Color.fromRGBO(28, 112, 50, 1.0),
+        // backgroundColor: Color.fromRGBO(91, 91, 92, 1.0),
         iconTheme: IconThemeData(color: Colors.white),
         elevation: Theme.of(context).platform == TargetPlatform.iOS ? 0.0 : 6.0,
       ),
@@ -42,7 +44,7 @@ class _RegistrtionPageState extends State<RegistrationPage> {
                 keyboardType: TextInputType.text,
                 onChanged: (String value) {
                   setState(() {
-                    //_FullNameValue = value;
+                    _fullName = value;
                   });
                 },
               ),
@@ -63,7 +65,7 @@ class _RegistrtionPageState extends State<RegistrationPage> {
                 keyboardType: TextInputType.phone,
                 onChanged: (String value) {
                   setState(() {
-                    //_PhoneNumberValue = value;
+                    _phoneNumber = value;
                   });
                 },
               ),
@@ -83,7 +85,14 @@ class _RegistrtionPageState extends State<RegistrationPage> {
                         color: Colors.white,
                       )),
                   onPressed: () {
-                    Navigator.pushReplacementNamed(context, '/allbus');
+                    Map<String, dynamic> body = {
+                      'name': _fullName,
+                      'password': "kendel",
+                      'phonenumber': _phoneNumber,
+                    };
+                    print("I have sent the request ....");
+                    // requestSignup(context, body);
+                    Navigator.pushReplacementNamed(context, '/book');
                   },
                 ),
                 // ),

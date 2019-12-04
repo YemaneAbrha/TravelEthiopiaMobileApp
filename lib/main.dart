@@ -10,6 +10,7 @@ import 'package:Guzo/pages/help.dart';
 import 'package:Guzo/pages/privacy.dart';
 import 'package:Guzo/pages/profile.dart';
 import 'package:Guzo/pages/splashScreen.dart';
+import 'package:Guzo/pages/bookingConfirmation.dart';
 
 void main() => runApp(MyApp());
 
@@ -27,6 +28,8 @@ class MyApp extends StatelessWidget {
         '/profile': (BuildContext context) => UserProfile(context),
         '/allbus': (BuildContext context) => HomeScreen(context),
         '/register': (BuildContext context) => RegistrationPage(context),
+        '/bookingConfirmation': (BuildContext context) =>
+            BookingConfirmationPage(context),
 
         //  "/allbus": (BuildContext context) => AllBus(),
       },

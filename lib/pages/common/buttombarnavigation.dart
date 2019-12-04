@@ -31,17 +31,17 @@ class ButtonState extends State<Buttom> {
       items: [
         BottomNavyBarItem(
           icon: Icon(Icons.apps),
-          title: Text('Home'),
-          activeColor: Colors.blue,
+          title: Text('HOME'),
+          activeColor: Color.fromRGBO(28, 112, 50, 1.0),
         ),
         BottomNavyBarItem(
             icon: Icon(Icons.card_travel),
-            title: Text('My Booking'),
-            activeColor: Colors.blue),
+            title: Text('MY BOOKING'),
+            activeColor: Color.fromRGBO(28, 112, 50, 1.0)),
         BottomNavyBarItem(
             icon: Icon(Icons.subway),
-            title: Text('All Bus'),
-            activeColor: Colors.blue),
+            title: Text('ALL BUS'),
+            activeColor: Color.fromRGBO(28, 112, 50, 1.0)),
       ],
     );
   }
