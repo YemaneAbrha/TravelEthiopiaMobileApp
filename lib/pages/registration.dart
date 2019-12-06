@@ -8,6 +8,7 @@ class RegistrationPage extends StatefulWidget {
 
 class _RegistrtionPageState extends State<RegistrationPage> {
   String _fullName, _phoneNumber;
+  bool _isloading = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -78,21 +79,46 @@ class _RegistrtionPageState extends State<RegistrationPage> {
                   shape: StadiumBorder(),
                   minWidth: 150.0,
                   height: 45,
-                  color: Color.fromRGBO(0, 136, 204, 0.8),
-                  child: new Text(' SUBMIT',
-                      style: new TextStyle(
-                        fontSize: 16.0,
-                        color: Colors.white,
-                      )),
+                  color: Color.fromRGBO(
+                    28,
+                    112,
+                    50,
+                    1.0,
+                  ),
+                  child: Row(
+                    children: <Widget>[
+                      _isloading
+                          ? new CircularProgressIndicator(
+                              valueColor:
+                                  new AlwaysStoppedAnimation(Colors.white),
+                              strokeWidth: 3.0,
+                            )
+                          : new SizedBox(
+                              width: 40.0,
+                            ),
+                      new SizedBox(
+                        width: 40.0,
+                      ),
+                      new Center(
+                        child: new Text(' SUBMIT',
+                            style: new TextStyle(
+                              fontSize: 16.0,
+                              color: Colors.white,
+                            )),
+                      )
+                    ],
+                  ),
                   onPressed: () {
                     Map<String, dynamic> body = {
                       'name': _fullName,
-                      'password': "kendel",
+                      'password': "kendelyemane",
                       'phonenumber': _phoneNumber,
                     };
+                    setState(() {
+                      _isloading = true;
+                    });
                     print("I have sent the request ....");
-                    // requestSignup(context, body);
-                    Navigator.pushReplacementNamed(context, '/book');
+                    requestSignup(context, body);
                   },
                 ),
                 // ),

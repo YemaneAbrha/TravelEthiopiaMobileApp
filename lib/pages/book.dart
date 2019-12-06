@@ -180,42 +180,42 @@ class _BookState extends State<Book> {
                   height: 20.0,
                 ),
                 // Divider(height: 20.0, color: Theme.of(context).primaryColor),
-                _payByOtherPhone
-                    ? TextField(
-                        decoration: new InputDecoration(
-                            icon: Icon(Icons.phone),
-                            labelText: "Phone Number",
-                            labelStyle: TextStyle(
-                              fontFamily: 'Raleway',
-                              color: Colors.black,
-                              fontSize: 16.0,
-                            ),
-                            border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(10.0))),
-                        keyboardType: TextInputType.phone,
-                        onChanged: (String value) {
-                          setState(() {
-                            //_titleValue = value;
-                          });
-                        },
-                      )
-                    : SwitchListTile(
-                        title: const Text(
-                          "Pay By Other Phone",
-                          style: TextStyle(
-                            fontFamily: 'Raleway',
-                            color: Colors.black,
-                            fontSize: 16.0,
-                          ),
-                        ),
-                        value: false,
-                        onChanged: (bool value) {
-                          setState(() {
-                            _payByOtherPhone = true;
-                          });
-                        },
-                        secondary: const Icon(Icons.phone),
-                      ),
+                // _payByOtherPhone
+                //     ? TextField(
+                //         decoration: new InputDecoration(
+                //             icon: Icon(Icons.phone),
+                //             labelText: "Phone Number",
+                //             labelStyle: TextStyle(
+                //               fontFamily: 'Raleway',
+                //               color: Colors.black,
+                //               fontSize: 16.0,
+                //             ),
+                //             border: OutlineInputBorder(
+                //                 borderRadius: BorderRadius.circular(10.0))),
+                //         keyboardType: TextInputType.phone,
+                //         onChanged: (String value) {
+                //           setState(() {
+                //             //_titleValue = value;
+                //           });
+                //         },
+                //       )
+                //     : SwitchListTile(
+                //         title: const Text(
+                //           "Pay By Other Phone",
+                //           style: TextStyle(
+                //             fontFamily: 'Raleway',
+                //             color: Colors.black,
+                //             fontSize: 16.0,
+                //           ),
+                //         ),
+                //         value: false,
+                //         onChanged: (bool value) {
+                //           setState(() {
+                //             _payByOtherPhone = true;
+                //           });
+                //         },
+                //         secondary: const Icon(Icons.phone),
+                //       ),
                 SizedBox(
                   height: 20.0,
                 ),

@@ -10,29 +10,40 @@ import 'package:Guzo/model/json/loginModel.dart';
 
 Future requestSignup(BuildContext context, Map<String, dynamic> body) async {
   try {
-    final url = "https://guzo-booking.herokuapp.com/user";
-    http.Response response = await http.post(url, body: body, headers: {});
+    final url = "http://guzo-booking.herokuapp.com/user/auth/signup";
+    final jsonbody = await jsonEncode(body, toEncodable: (e) => json.decode(e));
+    http.Response response = await http.post(
+      url,
+      body: jsonbody,
+      headers: {
+        "Accept": "application/json",
+        "Content-Type": "application/json"
+      },
+    );
+
     if (response.statusCode == 201) {
-      final user = json.decode(response.body);
-      print("Sucess");
-      //requestLoginAPI(context, user[0].phonenumber);
+      requestLoginAPI(context, jsonbody);
     }
   } catch (err) {
     showDialogSingleButton(context, "Unable to Register", "Server Error", "OK");
   }
 }
 
-Future<LoginModel> requestLoginAPI(
-    BuildContext context, String phonenumber) async {
-  final url = "GuzoEthiopia.net/user/login";
-  Map<String, String> body = {'phonenumber': phonenumber};
+Future<LoginModel> requestLoginAPI(BuildContext context, jsonbody) async {
+  final url = "http://guzo-booking.herokuapp.com/user/auth/login";
+  // print("Here is am ting to login");
   final response = await http.post(
     url,
-    body: body,
-    headers: {},
+    body: jsonbody,
+    headers: {
+      'Accept': "Application/json",
+      'Content-Type': 'Application/json',
+    },
   );
   if (response.statusCode == 200) {
     final responsebody = json.decode(response.body);
+    // print(responsebody);
+    Navigator.pushReplacementNamed(context, '/book');
     saveCurrentLogin(responsebody);
     return LoginModel.fromJson(responsebody);
   } else {
