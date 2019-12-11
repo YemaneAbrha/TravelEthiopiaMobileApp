@@ -10,20 +10,6 @@ import 'package:Guzo/app/functions/controller/getUserInfo.dart';
 import 'package:Guzo/app/functions/model/json/availiable.dart';
 
 final Token = getToken();
-// Future checkAvailiablity(
-//     BuildContext context, Map<String, dynamic> body) async {
-//   try {
-//     final url = 'guzoethipia.net/book';
-//     http.Response response = await http.get(url, headers: {
-//       HttpHeaders.authorizationHeader: 'Bearer $Token',
-//       "Accept": "application/json",
-//       "Content-type": "application/json"
-//     });
-//   } catch (e) {
-//     showDialogSingleButton(
-//         context, "Unable to check-Availiablity", "Server Error", "OK");
-//   }
-// }
 Future checkAvailiablity() async {
   var uri = Uri.parse("http://pub.dartlang.org/packages/create");
   var request = new http.MultipartRequest("GET", uri);

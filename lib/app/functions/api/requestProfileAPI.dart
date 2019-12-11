@@ -8,10 +8,8 @@ import 'package:Guzo/app/functions/controller/getUserInfo.dart';
 import 'package:Guzo/app/functions/controller/showSingleButtonDialog.dart';
 
 var Token;
-//show profile
 Future requestShowProfileAPI(BuildContext context) async {
   final url = 'profile/url';
-
   await getToken().then((result) {
     Token = result;
   });
@@ -27,7 +25,6 @@ Future requestShowProfileAPI(BuildContext context) async {
   }
 }
 
-//update profile
 Future requestUpdateProfile(
     BuildContext context, Map<String, dynamic> body) async {
   final url = 'updateprofileurl';

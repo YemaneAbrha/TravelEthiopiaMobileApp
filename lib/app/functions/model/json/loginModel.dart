@@ -19,18 +19,3 @@ class LoginModel {
         'id': id,
       };
 }
-
-// class SignupModel {
-//   String fullName;
-//   String phoneNumber;
-//   String password;
-//   // SignupModel(this.fullName, this.phoneNumber, this.password);
-//   // SignupModel.Map<String, dynamic> toJson(Map<String, dynamic> body) {}
-
-//   SignupModel.toJson(Map<String, dynamic> body) => {
-//         'name': rrfullName,
-//         'password': password,
-//         'phonenumber': phoneNumber,
-//       };
-//   // Function tojson() {}
-// }

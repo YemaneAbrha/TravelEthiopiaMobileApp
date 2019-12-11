@@ -29,7 +29,6 @@ class MyApp extends StatelessWidget {
         '/bookingConfirmation': (BuildContext context) =>
             BookingConfirmationPage(context),
       },
-      // theme: ThemeData(fontFamily: 'Raleway'),
       home: SplashScreenPage(context),
     );
   }

@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
-//import 'package:flutter/services.dart';
-//import 'package:splash_tokenauth/common/apifunctions/requestLogoutAPI.dart';
 
 class BasicDrawer extends StatefulWidget {
   @override

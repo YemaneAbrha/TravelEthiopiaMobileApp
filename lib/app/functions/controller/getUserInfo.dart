@@ -30,15 +30,4 @@ Future<bool> isAuthenticate() async {
   SharedPreferences preferences = await SharedPreferences.getInstance();
   bool _isAuthenticate = await preferences.getBool('isAuthenticate');
   return _isAuthenticate ??= false;
-  // return (!_isAuthenticate || _isAuthenticate == null)
-  //     ? false
-  //     : _isAuthenticate;
-  // print(" AAAAAAAAAAAA Haderaka chercher addis Ababaa cherhcer addus ababa");
-  // print(_isAuthenticate);
-
-  // if (_isAuthenticate != null) {
-  //   return _isAuthenticate;
-  // } else {
-  //   return false;
-  // }
 }

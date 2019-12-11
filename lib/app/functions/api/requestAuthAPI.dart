@@ -31,7 +31,6 @@ Future requestSignup(BuildContext context, Map<String, dynamic> body) async {
 
 Future<LoginModel> requestLoginAPI(BuildContext context, jsonbody) async {
   final url = "http://guzo-booking.herokuapp.com/user/auth/login";
-  // print("Here is am ting to login");
   final response = await http.post(
     url,
     body: jsonbody,

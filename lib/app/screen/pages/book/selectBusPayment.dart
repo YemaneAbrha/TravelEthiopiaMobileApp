@@ -29,7 +29,6 @@ class _SelectBusPageState extends State<SelectBusPage> {
                 children: <Widget>[
                   ListTile(
                     leading: CircleAvatar(
-                      // backgroundImage: Image.asset('assets/images/Guzo.png'),
                       backgroundImage: AssetImage('assets/images/Guzo.png'),
                       radius: 25,
                     ),

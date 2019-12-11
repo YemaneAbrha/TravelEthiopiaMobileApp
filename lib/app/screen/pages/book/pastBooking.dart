@@ -14,9 +14,7 @@ class _PastBookingPageState extends State<PastBookingPage> {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Container(
-      // padding: EdgeInsets.fromLTRB(0.0, 20.0, 0.0, 0.0),
       child: ListView(
         children: <Widget>[
           new SizedBox(

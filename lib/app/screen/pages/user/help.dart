@@ -4,7 +4,6 @@ import 'package:Guzo/app/screen/widget/basicappbar.dart';
 import 'package:Guzo/app/functions/controller/showSingleButtonDialog.dart';
 
 class HelpPage extends StatefulWidget {
-  //final dateFormat = DateFormat();
   HelpPage(BuildContext context);
   @override
   _HelpPageState createState() => _HelpPageState();

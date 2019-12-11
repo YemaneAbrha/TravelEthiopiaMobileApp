@@ -4,7 +4,6 @@ import 'package:Guzo/app/screen/widget/basicappbar.dart';
 import 'package:Guzo/app/screen/widget/buttombarnavigation.dart';
 
 class PrivacyPage extends StatefulWidget {
-  //final dateFormat = DateFormat();
   PrivacyPage(BuildContext context);
   @override
   _PrivacyPageState createState() => _PrivacyPageState();
