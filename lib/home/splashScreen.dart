@@ -33,7 +33,7 @@ class _SplashScreenPage extends State<SplashScreenPage> {
   @override
   Widget build(BuildContext context) {
     return new SplashScreen(
-      seconds: 2,
+      seconds: 10,
       navigateAfterSeconds:
           _isauthenticate ? new Book(context) : new RegistrationPage(context),
       image: new Image.asset('assets/images/Guzo.png'),
