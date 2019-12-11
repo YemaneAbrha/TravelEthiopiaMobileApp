@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:splashscreen/splashscreen.dart';
-import 'package:Guzo/pages/registration.dart';
-import 'package:Guzo/pages/book.dart';
-import 'package:Guzo/functions/getUserInfo.dart';
+import 'package:Guzo/app/screen/pages/auth/registration.dart';
+import 'package:Guzo/app/screen/pages/book/book.dart';
+import 'package:Guzo/app/functions/controller/getUserInfo.dart';
 
 class SplashScreenPage extends StatefulWidget {
   SplashScreenPage(BuildContext context);

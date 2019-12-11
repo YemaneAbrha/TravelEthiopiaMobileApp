@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:Guzo/pages/pastBooking.dart';
-import 'package:Guzo/pages/upcommingBooking.dart';
-import 'package:Guzo/pages/common/buttombarnavigation.dart';
+import 'package:Guzo/app/screen/pages/book/pastBooking.dart';
+import 'package:Guzo/app/screen/pages/book/upcommingBooking.dart';
+import 'package:Guzo/app/screen/widget/buttombarnavigation.dart';
 
 class MyBookingPage extends StatefulWidget {
   _MyBookingPageState createState() => _MyBookingPageState();

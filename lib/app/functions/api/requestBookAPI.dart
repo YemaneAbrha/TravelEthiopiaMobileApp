@@ -5,9 +5,9 @@ import 'package:http/http.dart' as http;
 import 'dart:async';
 import 'dart:convert';
 
-import 'package:Guzo/functions/showSingleButtonDialog.dart';
-import 'package:Guzo/functions/getUserInfo.dart';
-import 'package:Guzo/model/json/availiable.dart';
+import 'package:Guzo/app/functions/controller/showSingleButtonDialog.dart';
+import 'package:Guzo/app/functions/controller/getUserInfo.dart';
+import 'package:Guzo/app/functions/model/json/availiable.dart';
 
 final Token = getToken();
 // Future checkAvailiablity(

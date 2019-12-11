@@ -1,7 +1,7 @@
 // import 'package:Guzo/functions/getUserInfo.dart';
-import 'package:Guzo/functions/getUserInfo.dart';
+// import 'package:Guzo/app/functions/getUserInfo.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:Guzo/model/json/loginModel.dart';
+import 'package:Guzo/app/functions/model/json/loginModel.dart';
 
 saveCurrentLogin(Map responseJson) async {
   print("saveCurrentLogin function");

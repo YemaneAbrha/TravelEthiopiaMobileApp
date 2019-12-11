@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
 
-import 'package:Guzo/pages/registration.dart';
-
-import 'package:Guzo/pages/book.dart';
-import 'package:Guzo/pages/selectBusPayment.dart';
-import 'package:Guzo/pages/homePage.dart';
-import 'package:Guzo/pages/myBooking.dart';
-import 'package:Guzo/pages/help.dart';
-import 'package:Guzo/pages/privacy.dart';
-import 'package:Guzo/pages/profile.dart';
-import 'package:Guzo/pages/splashScreen.dart';
-import 'package:Guzo/pages/bookingConfirmation.dart';
+import 'package:Guzo/app/screen/pages/auth/registration.dart';
+import 'package:Guzo/app/screen/pages/book/book.dart';
+import 'package:Guzo/app/screen/pages/book/selectBusPayment.dart';
+import 'package:Guzo/app/screen/pages/book/homePage.dart';
+import 'package:Guzo/app/screen/pages/book/myBooking.dart';
+import 'package:Guzo/app/screen/pages/user/help.dart';
+import 'package:Guzo/app/screen/pages/user/privacy.dart';
+import 'package:Guzo/app/screen/pages/user/profile.dart';
+import 'package:Guzo/home/splashScreen.dart';
+import 'package:Guzo/app/screen/pages/book/bookingConfirmation.dart';
 
 void main() => runApp(MyApp());
 
@@ -18,7 +17,6 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      //theme: ThemeData(fontFamily: 'DancingScript'),
       routes: <String, WidgetBuilder>{
         "/mybooking": (BuildContext context) => MyBookingPage(),
         "/selectBus": (BuildContext context) => SelectBusPage(),
@@ -30,8 +28,6 @@ class MyApp extends StatelessWidget {
         '/register': (BuildContext context) => RegistrationPage(context),
         '/bookingConfirmation': (BuildContext context) =>
             BookingConfirmationPage(context),
-
-        //  "/allbus": (BuildContext context) => AllBus(),
       },
       // theme: ThemeData(fontFamily: 'Raleway'),
       home: SplashScreenPage(context),

@@ -1,8 +1,8 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
-import 'package:Guzo/pages/common/buttombarnavigation.dart';
-import 'package:Guzo/pages/common/basicappbar.dart';
-import 'package:Guzo/api_functions/requestBookAPI.dart';
+import 'package:Guzo/app/screen/widget/buttombarnavigation.dart';
+import 'package:Guzo/app/screen/widget/basicappbar.dart';
+import 'package:Guzo/app/functions/api/requestBookAPI.dart';
 
 class HomeScreen extends StatefulWidget {
   HomeScreen(BuildContext context);

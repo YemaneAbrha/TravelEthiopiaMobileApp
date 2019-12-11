@@ -4,9 +4,9 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
-import 'package:Guzo/functions/saveCurrentLogin.dart';
-import 'package:Guzo/functions/showSingleButtonDialog.dart';
-import 'package:Guzo/model/json/loginModel.dart';
+import 'package:Guzo/app/functions/controller/saveCurrentLogin.dart';
+import 'package:Guzo/app/functions/controller/showSingleButtonDialog.dart';
+import 'package:Guzo/app/functions/model/json/loginModel.dart';
 
 Future requestSignup(BuildContext context, Map<String, dynamic> body) async {
   try {

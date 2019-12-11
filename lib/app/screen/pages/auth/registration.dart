@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:Guzo/api_functions/requestAuthAPI.dart';
+import 'package:Guzo/app/functions/api/requestAuthAPI.dart';
 
 class RegistrationPage extends StatefulWidget {
   RegistrationPage(BuildContext context);

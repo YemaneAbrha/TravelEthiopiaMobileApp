@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:Guzo/pages/common/buttombarnavigation.dart';
-import 'package:Guzo/pages/common/basicappbar.dart';
-import 'package:Guzo/functions/showSingleButtonDialog.dart';
+import 'package:Guzo/app/screen/widget/buttombarnavigation.dart';
+import 'package:Guzo/app/screen/widget/basicappbar.dart';
+import 'package:Guzo/app/functions/controller/showSingleButtonDialog.dart';
 
 class HelpPage extends StatefulWidget {
   //final dateFormat = DateFormat();
