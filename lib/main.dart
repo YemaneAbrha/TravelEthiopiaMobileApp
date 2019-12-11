@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:Guzo/app/screen/pages/auth/registration.dart';
 import 'package:Guzo/app/screen/pages/book/book.dart';
 import 'package:Guzo/app/screen/pages/book/selectBusPayment.dart';
-import 'package:Guzo/app/screen/pages/book/homePage.dart';
+import 'package:Guzo/app/screen/pages/book/allBusList.dart';
 import 'package:Guzo/app/screen/pages/book/myBooking.dart';
 import 'package:Guzo/app/screen/pages/user/help.dart';
 import 'package:Guzo/app/screen/pages/user/privacy.dart';
@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
         "/help": (BuildContext context) => HelpPage(context),
         "/privacy": (BuildContext context) => PrivacyPage(context),
         '/profile': (BuildContext context) => UserProfile(context),
-        '/allbus': (BuildContext context) => HomeScreen(context),
+        '/allbus': (BuildContext context) => AllBusPage(context),
         '/register': (BuildContext context) => RegistrationPage(context),
         '/bookingConfirmation': (BuildContext context) =>
             BookingConfirmationPage(context),

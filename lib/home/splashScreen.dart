@@ -14,14 +14,9 @@ class _SplashScreenPage extends State<SplashScreenPage> {
   bool _isauthenticate;
   _isAuthenticate() async {
     bool value = await isAuthenticate();
-    // _isauthenticate = await isAuthenticate();
-
-    // print("is authenticate function");
     setState(() {
       _isauthenticate = value;
     });
-    print("First Here");
-    print(_isauthenticate);
   }
 
   @override
