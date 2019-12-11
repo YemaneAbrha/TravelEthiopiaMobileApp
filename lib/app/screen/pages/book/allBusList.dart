@@ -21,7 +21,6 @@ class _AllBusState extends State<AllBusPage> {
       appBar: BasicAppBar.getAppBar(context),
       backgroundColor: Color.fromRGBO(230, 230, 230, 1.0),
       body: Container(
-        // padding: EdgeInsets.fromLTRB(5.0, 0.0, 5.0, 0.0),
         child: FutureBuilder(
           future: allDeparture(context),
           builder: (BuildContext context, AsyncSnapshot snapshot) {

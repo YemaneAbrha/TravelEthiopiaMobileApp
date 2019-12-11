@@ -1,5 +1,3 @@
-// login and registration
-
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'dart:convert';
@@ -12,45 +10,40 @@ Future requestSignup(BuildContext context, Map<String, dynamic> body) async {
   try {
     final url = "http://guzo-booking.herokuapp.com/user/auth/signup";
     final jsonbody = await jsonEncode(body, toEncodable: (e) => json.decode(e));
-    http.Response response = await http.post(
-      url,
-      body: jsonbody,
-      headers: {
-        "Accept": "application/json",
-        "Content-Type": "application/json"
-      },
-    );
-
-    if (response.statusCode == 201) {
-      requestLoginAPI(context, jsonbody);
-    }
+    return await http.post(url, body: jsonbody, headers: {
+      "Accept": "application/json",
+      "Content-Type": "application/json"
+    }).then((response) {
+      print(response.statusCode);
+      (response.statusCode == 201)
+          ? requestLoginAPI(context, jsonbody)
+          : showDialogSingleButton(context, "Unable To Create Account",
+              "There may be validation Error try to correct input", "OK");
+    });
   } catch (err) {
-    showDialogSingleButton(context, "Unable to Register", "Server Error", "OK");
+    showDialogSingleButton(
+        context, "Unable to register", "Connection Error ", "OK");
   }
 }
 
-Future<LoginModel> requestLoginAPI(BuildContext context, jsonbody) async {
-  final url = "http://guzo-booking.herokuapp.com/user/auth/login";
-  final response = await http.post(
-    url,
-    body: jsonbody,
-    headers: {
-      'Accept': "Application/json",
-      'Content-Type': 'Application/json',
-    },
-  );
-  if (response.statusCode == 200) {
-    final responsebody = json.decode(response.body);
-    // print(responsebody);
-    Navigator.pushReplacementNamed(context, '/book');
-    saveCurrentLogin(responsebody);
-    return LoginModel.fromJson(responsebody);
-  } else {
-    showDialogSingleButton(
-        context,
-        'Unable to login',
-        'Your phone number may be incorrect or you dont have account plase create account and login again',
-        'OK');
-    return null;
+Future requestLoginAPI(BuildContext context, jsonbody) async {
+  try {
+    final url = "http://guzo-booking.herokuapp.com/user/auth/login";
+    return http.post(url, body: jsonbody, headers: {
+      "Accept": "application/json",
+      "Content-Type": "application/json"
+    }).then((response) {
+      (response.statusCode == 200)
+          ? (() {
+              Navigator.pushReplacementNamed(context, '/book');
+              final responsebody = json.decode(response.body);
+              saveCurrentLogin(responsebody);
+              return LoginModel.fromJson(responsebody);
+            })
+          : showDialogSingleButton(
+              context, "unable to login", "wrong username or password", "OK");
+    });
+  } catch (e) {
+    showDialogSingleButton(context, "unable login", "Network Error", "OK");
   }
 }
