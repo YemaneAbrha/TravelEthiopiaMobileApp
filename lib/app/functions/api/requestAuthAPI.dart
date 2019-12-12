@@ -33,15 +33,15 @@ Future requestLoginAPI(BuildContext context, jsonbody) async {
       "Accept": "application/json",
       "Content-Type": "application/json"
     }).then((response) {
-      (response.statusCode == 200)
-          ? (() {
-              Navigator.pushReplacementNamed(context, '/book');
-              final responsebody = json.decode(response.body);
-              saveCurrentLogin(responsebody);
-              return LoginModel.fromJson(responsebody);
-            })
-          : showDialogSingleButton(
-              context, "unable to login", "wrong username or password", "OK");
+      if (response.statusCode == 200) {
+        final responsebody = jsonDecode(response.body);
+        saveCurrentLogin(responsebody);
+        Navigator.pushReplacementNamed(context, '/book');
+        return LoginModel.fromJson(responsebody);
+      } else {
+        showDialogSingleButton(
+            context, "unable to login", "wrong username or password", "OK");
+      }
     });
   } catch (e) {
     showDialogSingleButton(context, "unable login", "Network Error", "OK");
